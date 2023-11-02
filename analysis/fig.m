@@ -1,6 +1,6 @@
 function [ hdl ] = fig()
 %[ hdl ] = fig()
-% fig creates a figure occupying all the screen.
+% fig creates a fullscreen figure instead of the default tiny matlab figure.
 %
 % OUTPUT
 % hdl: figure handle

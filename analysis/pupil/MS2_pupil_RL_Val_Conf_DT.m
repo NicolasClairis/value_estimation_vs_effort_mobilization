@@ -17,7 +17,6 @@ addpath(lumPath);
 %% check if VBA toolbox is in the path already or not
 % if the VBA toolbox is not installed yet, please do it otherwise the
 % script may not apply the RFT
-wherever = pwd;
 if ~exist('RFT_GLM_contrast.m','file')
     error(['Please install the VBA toolbox at ',...
         'https://mbb-team.github.io/VBA-toolbox/download/ to be able to ',...

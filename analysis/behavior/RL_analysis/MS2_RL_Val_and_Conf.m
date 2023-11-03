@@ -36,9 +36,7 @@ NS = length(subject_id);
 n_RL_runs = 3;
 n_GL_trials_perRun = 24;
 n_NP_trials_perRun = 12;
-if ~exist('n_bins','var') || isempty(n_bins) || n_bins <= 1
-    n_bins = 8;
-end
+n_bins = 8;
 trialGP_idx = 1:n_GL_trials_perRun;
 trialLP_idx = 1:n_GL_trials_perRun;
 trialGLP_idx = 1:(n_GL_trials_perRun*2);

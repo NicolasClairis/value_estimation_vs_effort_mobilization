@@ -18,11 +18,7 @@ function [ con_vec_all, con_names, ttest_pval ] = MS2_extract_ROI_con(GLM )
 mainRoot = 'enter path here';
 
 %% directories
-pc_cluster = 'pc';
-if ~exist('pc_cluster','var') || isempty(pc_cluster)
-    pc_cluster = input(' ''pc'' or ''cluster''?','s');
-end
-disp(['Extracting GLM in the ',pc_cluster,'.']);
+disp('Extracting GLM.');
 root = 'enter path here';
 ROI_path = [root,filesep,'behavior_summary',filesep,'ROI',filesep];
 ROI_masks_path = 'enter path here';

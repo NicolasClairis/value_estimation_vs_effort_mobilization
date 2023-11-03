@@ -56,15 +56,15 @@ for iS = 1:NS
         run_nm = num2str(RL_runs_idx(iRun));
         %% load data
         load_onsetStruct = getfield(load([onsets_folder,'onsets_sub',subid,'_learning_run',run_nm,'.mat']),'learn');
-        QcQuc_GLP_run_tmp = load_onsetStruct.mod.Nico_VBA_models.Q_model(model_n).raw.GL_Pairs.GL_PairsTrials.chosenItem - load_onsetStruct.mod.Nico_VBA_models.Q_model(model_n).raw.GL_Pairs.GL_PairsTrials.unchosenItem;
-        % QcQuc_GLP_run_tmp = load_onsetStruct.mod.Nico_VBA_models.Q_model(model_n).raw.SV.GL_Pairs.GL_PairsTrials; % in case you want to check for Val
+        QcQuc_GLP_run_tmp = load_onsetStruct.mod.Q_model(model_n).raw.GL_Pairs.GL_PairsTrials.chosenItem - load_onsetStruct.mod.Q_model(model_n).raw.GL_Pairs.GL_PairsTrials.unchosenItem;
+        % QcQuc_GLP_run_tmp = load_onsetStruct.mod.Q_model(model_n).raw.SV.GL_Pairs.GL_PairsTrials; % in case you want to check for Val
         switch conf_formula
             case 'pBest_centeredSquared'
-                Conf_GLP_run_tmp = ((load_onsetStruct.mod.Nico_VBA_models.Q_model(model_n).raw.pChoice.best.GL_Pairs.GL_PairsTrials - 0.5).^2)./0.25;
+                Conf_GLP_run_tmp = ((load_onsetStruct.mod.Q_model(model_n).raw.pChoice.best.GL_Pairs.GL_PairsTrials - 0.5).^2)./0.25;
             case 'pLeft_centeredSquared'
-                Conf_GLP_run_tmp = (( load_onsetStruct.mod.Nico_VBA_models.Q_model(model_n).raw.pChoice.left.GL_Pairs.GL_PairsTrials - 0.5).^2)./0.25;
+                Conf_GLP_run_tmp = (( load_onsetStruct.mod.Q_model(model_n).raw.pChoice.left.GL_Pairs.GL_PairsTrials - 0.5).^2)./0.25;
             case 'pChosen'
-                Conf_GLP_run_tmp = load_onsetStruct.mod.Nico_VBA_models.Q_model(model_n).raw.pChoice.chosen.GL_Pairs.GL_PairsTrials;
+                Conf_GLP_run_tmp = load_onsetStruct.mod.Q_model(model_n).raw.pChoice.chosen.GL_Pairs.GL_PairsTrials;
         end
         
         %% test correlation

@@ -1,11 +1,9 @@
-function [ mChoices ] = MS2_RL_avg_choices( analysis_type )
-%[ mChoices ] = MS2_RL_avg_choices( analysis_type )
+function [ mChoices ] = MS2_RL_avg_choices(  )
+%[ mChoices ] = MS2_RL_avg_choices(  )
 % MS2_RL_avg_choices will get the average amount obtained per session for each
 % subject in the reinforcement learning task.
 %
 % INPUT
-% analysis_type: string indicating which subjects to include
-%
 % OUTPUT
 % mChoices: structure with average proportion of choices
 

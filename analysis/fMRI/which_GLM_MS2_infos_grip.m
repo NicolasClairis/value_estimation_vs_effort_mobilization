@@ -90,9 +90,9 @@ if o_inc ~= 0
             %% model variables
             if mod_inc.mdl_n ~= 0
                 %% ressource (incentive, all trials)
-                if mod_inc.X_pred ~= 0 && ismember(mod_inc.X_pred,[5,6])
+                if mod_inc.E_pred ~= 0 && ismember(mod_inc.E_pred,[5,6])
                     n_prm_grip = n_prm_grip + 1;
-                    switch mod_inc.X_pred
+                    switch mod_inc.E_pred
                         case 5
                             fprintf(['ressource predicted by model ',num2str(mod_inc.mdl_n),' based on actual perf']);
                         case 6
@@ -180,9 +180,9 @@ if o_inc ~= 0
             %% model variables
             if mod_inc.mdl_n ~= 0
                 %% ressource (incentive, all trials)
-                if mod_inc.X_pred ~= 0 && ismember(mod_inc.X_pred,[3,4])
+                if mod_inc.E_pred ~= 0 && ismember(mod_inc.E_pred,[3,4])
                     n_prm_grip = n_prm_grip + 1;
-                    switch mod_inc.X_pred
+                    switch mod_inc.E_pred
                         case 3
                             fprintf(['ressource predicted by model ',num2str(mod_inc.mdl_n),' based on actual perf']);
                         case 4
@@ -306,9 +306,9 @@ if o_inc ~= 0
                 fprintf('/');
             end
             %% ressource (incentive, all trials)
-            if mod_inc.X_pred ~= 0 && ismember(mod_inc.X_pred,[1,2])
+            if mod_inc.E_pred ~= 0 && ismember(mod_inc.E_pred,[1,2])
                 n_prm_grip = n_prm_grip + 1;
-                switch mod_inc.X_pred
+                switch mod_inc.E_pred
                     case 1
                         fprintf(['ressource predicted by model ',num2str(mod_inc.mdl_n),' based on actual perf']);
                     case 2
@@ -389,9 +389,9 @@ if o_inc ~= 0
             %% model variables
             if mod_inc.mdl_n ~= 0
                 %% ressource (incentive, to gain trials)
-                if mod_inc.X_pred ~= 0 && ismember(mod_inc.X_pred,[5,6])
+                if mod_inc.E_pred ~= 0 && ismember(mod_inc.E_pred,[5,6])
                     n_prm_grip = n_prm_grip + 1;
-                    switch mod_inc.X_pred
+                    switch mod_inc.E_pred
                         case 5
                             fprintf(['ressource predicted by model ',num2str(mod_inc.mdl_n),' based on actual perf']);
                         case 6
@@ -479,9 +479,9 @@ if o_inc ~= 0
             %% model variables
             if mod_inc.mdl_n ~= 0
                 %% ressource (incentive, to gain trials)
-                if mod_inc.X_pred ~= 0 && ismember(mod_inc.X_pred,[3,4])
+                if mod_inc.E_pred ~= 0 && ismember(mod_inc.E_pred,[3,4])
                     n_prm_grip = n_prm_grip + 1;
-                    switch mod_inc.X_pred
+                    switch mod_inc.E_pred
                         case 3
                             fprintf(['ressource predicted by model ',num2str(mod_inc.mdl_n),' based on actual perf']);
                         case 4
@@ -605,9 +605,9 @@ if o_inc ~= 0
                 fprintf('/');
             end
             %% ressource (incentive, to gain trials)
-            if mod_inc.X_pred ~= 0 && ismember(mod_inc.X_pred,[1,2])
+            if mod_inc.E_pred ~= 0 && ismember(mod_inc.E_pred,[1,2])
                 n_prm_grip = n_prm_grip + 1;
-                switch mod_inc.X_pred
+                switch mod_inc.E_pred
                     case 1
                         fprintf(['ressource predicted by model ',num2str(mod_inc.mdl_n),' based on actual perf']);
                     case 2
@@ -686,9 +686,9 @@ if o_inc ~= 0
             %% model variables
             if mod_inc.mdl_n ~= 0
                 %% ressource (incentive, to lose trials)
-                if mod_inc.X_pred ~= 0 && ismember(mod_inc.X_pred,[5,6])
+                if mod_inc.E_pred ~= 0 && ismember(mod_inc.E_pred,[5,6])
                     n_prm_grip = n_prm_grip + 1;
-                    switch mod_inc.X_pred
+                    switch mod_inc.E_pred
                         case 5
                             fprintf(['ressource predicted by model ',num2str(mod_inc.mdl_n),' based on actual perf']);
                         case 6
@@ -776,9 +776,9 @@ if o_inc ~= 0
             %% model variables
             if mod_inc.mdl_n ~= 0
                 %% ressource (incentive, to lose trials)
-                if mod_inc.X_pred ~= 0 && ismember(mod_inc.X_pred,[3,4])
+                if mod_inc.E_pred ~= 0 && ismember(mod_inc.E_pred,[3,4])
                     n_prm_grip = n_prm_grip + 1;
-                    switch mod_inc.X_pred
+                    switch mod_inc.E_pred
                         case 3
                             fprintf(['ressource predicted by model ',num2str(mod_inc.mdl_n),' based on actual perf']);
                         case 4
@@ -902,9 +902,9 @@ if o_inc ~= 0
                 fprintf('/');
             end
             %% ressource (incentive, to lose trials)
-            if mod_inc.X_pred ~= 0 && ismember(mod_inc.X_pred,[1,2])
+            if mod_inc.E_pred ~= 0 && ismember(mod_inc.E_pred,[1,2])
                 n_prm_grip = n_prm_grip + 1;
-                switch mod_inc.X_pred
+                switch mod_inc.E_pred
                     case 1
                         fprintf(['ressource predicted by model ',num2str(mod_inc.mdl_n),' based on actual perf']);
                     case 2
@@ -1005,9 +1005,9 @@ if o_dispE ~= 0
             %% model variables
             if mod_dispE.mdl_n ~= 0
                 %% ressource (effort scale, all trials)
-                if mod_dispE.X_pred ~= 0 && ismember(mod_dispE.X_pred,[5,6])
+                if mod_dispE.E_pred ~= 0 && ismember(mod_dispE.E_pred,[5,6])
                     n_prm_grip = n_prm_grip + 1;
-                    switch mod_dispE.X_pred
+                    switch mod_dispE.E_pred
                         case 5
                             fprintf(['ressource predicted by model ',num2str(mod_dispE.mdl_n),' based on actual perf']);
                         case 6
@@ -1087,9 +1087,9 @@ if o_dispE ~= 0
             %% model variables
             if mod_dispE.mdl_n ~= 0
                 %% ressource (effort scale, all trials)
-                if mod_dispE.X_pred ~= 0 && ismember(mod_dispE.X_pred,[3,4])
+                if mod_dispE.E_pred ~= 0 && ismember(mod_dispE.E_pred,[3,4])
                     n_prm_grip = n_prm_grip + 1;
-                    switch mod_dispE.X_pred
+                    switch mod_dispE.E_pred
                         case 3
                             fprintf(['ressource predicted by model ',num2str(mod_dispE.mdl_n),' based on actual perf']);
                         case 4
@@ -1182,9 +1182,9 @@ if o_dispE ~= 0
                 fprintf('/');
             end
             %% ressource (effort scale, all trials)
-            if mod_dispE.X_pred ~= 0 && ismember(mod_dispE.X_pred,[1,2])
+            if mod_dispE.E_pred ~= 0 && ismember(mod_dispE.E_pred,[1,2])
                 n_prm_grip = n_prm_grip + 1;
-                switch mod_dispE.X_pred
+                switch mod_dispE.E_pred
                     case 1
                         fprintf(['ressource predicted by model ',num2str(mod_dispE.mdl_n),' based on actual perf']);
                     case 2
@@ -1265,9 +1265,9 @@ if o_dispE ~= 0
             %% model variables
             if mod_dispE.mdl_n ~= 0
                 %% ressource (effort scale, to gain trials)
-                if mod_dispE.X_pred ~= 0 && ismember(mod_dispE.X_pred,[5,6])
+                if mod_dispE.E_pred ~= 0 && ismember(mod_dispE.E_pred,[5,6])
                     n_prm_grip = n_prm_grip + 1;
-                    switch mod_dispE.X_pred
+                    switch mod_dispE.E_pred
                         case 5
                             fprintf(['ressource predicted by model ',num2str(mod_dispE.mdl_n),' based on actual perf']);
                         case 6
@@ -1355,9 +1355,9 @@ if o_dispE ~= 0
             %% model variables
             if mod_dispE.mdl_n ~= 0
                 %% ressource (effort scale, to gain trials)
-                if mod_dispE.X_pred ~= 0 && ismember(mod_dispE.X_pred,[3,4])
+                if mod_dispE.E_pred ~= 0 && ismember(mod_dispE.E_pred,[3,4])
                     n_prm_grip = n_prm_grip + 1;
-                    switch mod_dispE.X_pred
+                    switch mod_dispE.E_pred
                         case 3
                             fprintf(['ressource predicted by model ',num2str(mod_dispE.mdl_n),' based on actual perf']);
                         case 4
@@ -1450,9 +1450,9 @@ if o_dispE ~= 0
                 fprintf('/');
             end
             %% ressource (effort scale, to gain trials)
-            if mod_dispE.X_pred ~= 0 && ismember(mod_dispE.X_pred,[1,2])
+            if mod_dispE.E_pred ~= 0 && ismember(mod_dispE.E_pred,[1,2])
                 n_prm_grip = n_prm_grip + 1;
-                switch mod_dispE.X_pred
+                switch mod_dispE.E_pred
                     case 1
                         fprintf(['ressource predicted by model ',num2str(mod_dispE.mdl_n),' based on actual perf']);
                     case 2
@@ -1532,9 +1532,9 @@ if o_dispE ~= 0
             %% model variables
             if mod_dispE.mdl_n ~= 0
                 %% ressource (effort scale, to lose trials)
-                if mod_dispE.X_pred ~= 0 && ismember(mod_dispE.X_pred,[5,6])
+                if mod_dispE.E_pred ~= 0 && ismember(mod_dispE.E_pred,[5,6])
                     n_prm_grip = n_prm_grip + 1;
-                    switch mod_dispE.X_pred
+                    switch mod_dispE.E_pred
                         case 5
                             fprintf(['ressource predicted by model ',num2str(mod_dispE.mdl_n),' based on actual perf']);
                         case 6
@@ -1622,9 +1622,9 @@ if o_dispE ~= 0
             %% model variables
             if mod_dispE.mdl_n ~= 0
                 %% ressource (effort scale, to lose trials)
-                if mod_dispE.X_pred ~= 0 && ismember(mod_dispE.X_pred,[3,4])
+                if mod_dispE.E_pred ~= 0 && ismember(mod_dispE.E_pred,[3,4])
                     n_prm_grip = n_prm_grip + 1;
-                    switch mod_dispE.X_pred
+                    switch mod_dispE.E_pred
                         case 3
                             fprintf(['ressource predicted by model ',num2str(mod_dispE.mdl_n),' based on actual perf']);
                         case 4
@@ -1717,9 +1717,9 @@ if o_dispE ~= 0
                 fprintf('/');
             end
             %% ressource (effort scale, to lose trials)
-            if mod_dispE.X_pred ~= 0 && ismember(mod_dispE.X_pred,[1,2])
+            if mod_dispE.E_pred ~= 0 && ismember(mod_dispE.E_pred,[1,2])
                 n_prm_grip = n_prm_grip + 1;
-                switch mod_dispE.X_pred
+                switch mod_dispE.E_pred
                     case 1
                         fprintf(['ressource predicted by model ',num2str(mod_dispE.mdl_n),' based on actual perf']);
                     case 2
@@ -1995,9 +1995,9 @@ if o_fbk ~= 0
                 fprintf('/');
             end
             %% ressource (feedback, all trials)
-            if mod_fbk.X_pred ~= 0 && ismember(mod_fbk.X_pred,[5,6])
+            if mod_fbk.E_pred ~= 0 && ismember(mod_fbk.E_pred,[5,6])
                 n_prm_grip = n_prm_grip + 1;
-                switch mod_fbk.X_pred
+                switch mod_fbk.E_pred
                     case 5
                         fprintf(['ressource predicted by model ',num2str(mod_fbk.mdl_n),' based on actual perf']);
                     case 6
@@ -2023,9 +2023,9 @@ if o_fbk ~= 0
                 end
             end
             %% ressource (feedback, all trials)
-            if mod_fbk.X_pred ~= 0 && ismember(mod_fbk.X_pred,[1,2])
+            if mod_fbk.E_pred ~= 0 && ismember(mod_fbk.E_pred,[1,2])
                 n_prm_grip = n_prm_grip + 1;
-                switch mod_fbk.X_pred
+                switch mod_fbk.E_pred
                     case 1
                         fprintf(['ressource predicted by model ',num2str(mod_fbk.mdl_n),' based on actual perf']);
                     case 2
@@ -2133,9 +2133,9 @@ if o_fbk ~= 0
                 end
             end
             %% ressource (feedback, to gain trials)
-            if mod_fbk.X_pred ~= 0
+            if mod_fbk.E_pred ~= 0
                 n_prm_grip = n_prm_grip + 1;
-                switch mod_fbk.X_pred
+                switch mod_fbk.E_pred
                     case 1
                         fprintf(['ressource predicted by model ',num2str(mod_fbk.mdl_n),' based on actual perf']);
                     case 2
@@ -2243,9 +2243,9 @@ if o_fbk ~= 0
                 end
             end
             %% ressource (feedback, to lose trials)
-            if mod_fbk.X_pred ~= 0
+            if mod_fbk.E_pred ~= 0
                 n_prm_grip = n_prm_grip + 1;
-                switch mod_fbk.X_pred
+                switch mod_fbk.E_pred
                     case 1
                         fprintf(['ressource predicted by model ',num2str(mod_fbk.mdl_n),' based on actual perf']);
                     case 2

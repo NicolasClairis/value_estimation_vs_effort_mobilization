@@ -2079,8 +2079,8 @@ for iRun = 1:n_total_runs
                 % model variables
                 if mod_inc.mdl_n ~= 0
                     % ressource
-                    if ismember(mod_inc.X_pred,[5,6])
-                        [n_prm, prm_idx, bf_idx] = update_n_prm(n_prm, prm_idx, task_nm, run_nm, nBperR, [task_id,'mod_inc_X_pred'], bf_idx, sub_nm);
+                    if ismember(mod_inc.E_pred,[5,6])
+                        [n_prm, prm_idx, bf_idx] = update_n_prm(n_prm, prm_idx, task_nm, run_nm, nBperR, [task_id,'mod_inc_E_pred'], bf_idx, sub_nm);
                     end
                 end
                 
@@ -2119,8 +2119,8 @@ for iRun = 1:n_total_runs
                 if mod_inc.mdl_n ~= 0
                     
                     % ressource
-                    if ismember(mod_inc.X_pred,[3,4])
-                        [n_prm, prm_idx, bf_idx] = update_n_prm(n_prm, prm_idx, task_nm, run_nm, nBperR, [task_id,'mod_inc_X_pred'], bf_idx, sub_nm);
+                    if ismember(mod_inc.E_pred,[3,4])
+                        [n_prm, prm_idx, bf_idx] = update_n_prm(n_prm, prm_idx, task_nm, run_nm, nBperR, [task_id,'mod_inc_E_pred'], bf_idx, sub_nm);
                     end
                     
                     % cost
@@ -2175,8 +2175,8 @@ for iRun = 1:n_total_runs
                 end
                 
                 % ressource
-                if ismember(mod_inc.X_pred,[1,2])
-                    [n_prm, prm_idx, bf_idx] = update_n_prm(n_prm, prm_idx, task_nm, run_nm, nBperR, [task_id,'mod_inc_X_pred'], bf_idx, sub_nm);
+                if ismember(mod_inc.E_pred,[1,2])
+                    [n_prm, prm_idx, bf_idx] = update_n_prm(n_prm, prm_idx, task_nm, run_nm, nBperR, [task_id,'mod_inc_E_pred'], bf_idx, sub_nm);
                 end
                 
                 % performance
@@ -2209,8 +2209,8 @@ for iRun = 1:n_total_runs
                 % model variables
                 if mod_inc.mdl_n ~= 0
                     % ressource
-                    if ismember(mod_inc.X_pred,[5,6])
-                        [n_prm, prm_idx, bf_idx] = update_n_prm(n_prm, prm_idx, task_nm, run_nm, nBperR, [task_id,'mod_inc_X_pred',trialType_nm], bf_idx, sub_nm);
+                    if ismember(mod_inc.E_pred,[5,6])
+                        [n_prm, prm_idx, bf_idx] = update_n_prm(n_prm, prm_idx, task_nm, run_nm, nBperR, [task_id,'mod_inc_E_pred',trialType_nm], bf_idx, sub_nm);
                     end
                 end
                 
@@ -2249,8 +2249,8 @@ for iRun = 1:n_total_runs
                 if mod_inc.mdl_n ~= 0
                     
                     % ressource
-                    if ismember(mod_inc.X_pred,[3,4])
-                        [n_prm, prm_idx, bf_idx] = update_n_prm(n_prm, prm_idx, task_nm, run_nm, nBperR, [task_id,'mod_inc_X_pred',trialType_nm], bf_idx, sub_nm);
+                    if ismember(mod_inc.E_pred,[3,4])
+                        [n_prm, prm_idx, bf_idx] = update_n_prm(n_prm, prm_idx, task_nm, run_nm, nBperR, [task_id,'mod_inc_E_pred',trialType_nm], bf_idx, sub_nm);
                     end
                     
                     % cost
@@ -2305,8 +2305,8 @@ for iRun = 1:n_total_runs
                 end
                 
                 % ressource
-                if ismember(mod_inc.X_pred,[1,2])
-                    [n_prm, prm_idx, bf_idx] = update_n_prm(n_prm, prm_idx, task_nm, run_nm, nBperR, [task_id,'mod_inc_X_pred',trialType_nm], bf_idx, sub_nm);
+                if ismember(mod_inc.E_pred,[1,2])
+                    [n_prm, prm_idx, bf_idx] = update_n_prm(n_prm, prm_idx, task_nm, run_nm, nBperR, [task_id,'mod_inc_E_pred',trialType_nm], bf_idx, sub_nm);
                 end
                 
                 % performance
@@ -2338,8 +2338,8 @@ for iRun = 1:n_total_runs
                 % model variables
                 if mod_inc.mdl_n ~= 0
                     % ressource
-                    if ismember(mod_inc.X_pred,[5,6])
-                        [n_prm, prm_idx, bf_idx] = update_n_prm(n_prm, prm_idx, task_nm, run_nm, nBperR, [task_id,'mod_inc_X_pred',trialType_nm], bf_idx, sub_nm);
+                    if ismember(mod_inc.E_pred,[5,6])
+                        [n_prm, prm_idx, bf_idx] = update_n_prm(n_prm, prm_idx, task_nm, run_nm, nBperR, [task_id,'mod_inc_E_pred',trialType_nm], bf_idx, sub_nm);
                     end
                 end
                 
@@ -2378,8 +2378,8 @@ for iRun = 1:n_total_runs
                 if mod_inc.mdl_n ~= 0
                     
                     % ressource
-                    if ismember(mod_inc.X_pred,[3,4])
-                        [n_prm, prm_idx, bf_idx] = update_n_prm(n_prm, prm_idx, task_nm, run_nm, nBperR, [task_id,'mod_inc_X_pred',trialType_nm], bf_idx, sub_nm);
+                    if ismember(mod_inc.E_pred,[3,4])
+                        [n_prm, prm_idx, bf_idx] = update_n_prm(n_prm, prm_idx, task_nm, run_nm, nBperR, [task_id,'mod_inc_E_pred',trialType_nm], bf_idx, sub_nm);
                     end
                     
                     % cost
@@ -2434,8 +2434,8 @@ for iRun = 1:n_total_runs
                 end
                 
                 % ressource
-                if ismember(mod_inc.X_pred,[1,2])
-                    [n_prm, prm_idx, bf_idx] = update_n_prm(n_prm, prm_idx, task_nm, run_nm, nBperR, [task_id,'mod_inc_X_pred',trialType_nm], bf_idx, sub_nm);
+                if ismember(mod_inc.E_pred,[1,2])
+                    [n_prm, prm_idx, bf_idx] = update_n_prm(n_prm, prm_idx, task_nm, run_nm, nBperR, [task_id,'mod_inc_E_pred',trialType_nm], bf_idx, sub_nm);
                 end
                 
                 % performance
@@ -2477,8 +2477,8 @@ for iRun = 1:n_total_runs
                 % model variables
                 if mod_dispE.mdl_n ~= 0
                     % ressource
-                    if ismember(mod_dispE.X_pred,[5,6])
-                        [n_prm, prm_idx, bf_idx] = update_n_prm(n_prm, prm_idx, task_nm, run_nm, nBperR, [task_id,'mod_dispE_X_pred'], bf_idx, sub_nm);
+                    if ismember(mod_dispE.E_pred,[5,6])
+                        [n_prm, prm_idx, bf_idx] = update_n_prm(n_prm, prm_idx, task_nm, run_nm, nBperR, [task_id,'mod_dispE_E_pred'], bf_idx, sub_nm);
                     end
                 end
                 
@@ -2517,8 +2517,8 @@ for iRun = 1:n_total_runs
                 if mod_dispE.mdl_n ~= 0
                     
                     % ressource
-                    if ismember(mod_dispE.X_pred,[3,4])
-                        [n_prm, prm_idx, bf_idx] = update_n_prm(n_prm, prm_idx, task_nm, run_nm, nBperR, [task_id,'mod_dispE_X_pred'], bf_idx, sub_nm);
+                    if ismember(mod_dispE.E_pred,[3,4])
+                        [n_prm, prm_idx, bf_idx] = update_n_prm(n_prm, prm_idx, task_nm, run_nm, nBperR, [task_id,'mod_dispE_E_pred'], bf_idx, sub_nm);
                     end
                     
                     % cost
@@ -2563,8 +2563,8 @@ for iRun = 1:n_total_runs
                 end
                 
                 % ressource
-                if ismember(mod_dispE.X_pred,[1,2])
-                    [n_prm, prm_idx, bf_idx] = update_n_prm(n_prm, prm_idx, task_nm, run_nm, nBperR, [task_id,'mod_dispE_X_pred'], bf_idx, sub_nm);
+                if ismember(mod_dispE.E_pred,[1,2])
+                    [n_prm, prm_idx, bf_idx] = update_n_prm(n_prm, prm_idx, task_nm, run_nm, nBperR, [task_id,'mod_dispE_E_pred'], bf_idx, sub_nm);
                 end
                 
                 % performance
@@ -2597,8 +2597,8 @@ for iRun = 1:n_total_runs
                 % model variables
                 if mod_dispE.mdl_n ~= 0
                     % ressource
-                    if ismember(mod_dispE.X_pred,[5,6])
-                        [n_prm, prm_idx, bf_idx] = update_n_prm(n_prm, prm_idx, task_nm, run_nm, nBperR, [task_id,'mod_dispE_X_pred',trialType_nm], bf_idx, sub_nm);
+                    if ismember(mod_dispE.E_pred,[5,6])
+                        [n_prm, prm_idx, bf_idx] = update_n_prm(n_prm, prm_idx, task_nm, run_nm, nBperR, [task_id,'mod_dispE_E_pred',trialType_nm], bf_idx, sub_nm);
                     end
                 end
                 
@@ -2637,8 +2637,8 @@ for iRun = 1:n_total_runs
                 if mod_dispE.mdl_n ~= 0
                     
                     % ressource
-                    if ismember(mod_dispE.X_pred,[3,4])
-                        [n_prm, prm_idx, bf_idx] = update_n_prm(n_prm, prm_idx, task_nm, run_nm, nBperR, [task_id,'mod_dispE_X_pred',trialType_nm], bf_idx, sub_nm);
+                    if ismember(mod_dispE.E_pred,[3,4])
+                        [n_prm, prm_idx, bf_idx] = update_n_prm(n_prm, prm_idx, task_nm, run_nm, nBperR, [task_id,'mod_dispE_E_pred',trialType_nm], bf_idx, sub_nm);
                     end
                 
                     % cost
@@ -2683,8 +2683,8 @@ for iRun = 1:n_total_runs
                 end
                 
                 % ressource
-                if ismember(mod_dispE.X_pred,[1,2])
-                    [n_prm, prm_idx, bf_idx] = update_n_prm(n_prm, prm_idx, task_nm, run_nm, nBperR, [task_id,'mod_dispE_X_pred',trialType_nm], bf_idx, sub_nm);
+                if ismember(mod_dispE.E_pred,[1,2])
+                    [n_prm, prm_idx, bf_idx] = update_n_prm(n_prm, prm_idx, task_nm, run_nm, nBperR, [task_id,'mod_dispE_E_pred',trialType_nm], bf_idx, sub_nm);
                 end
                 
                 % performance
@@ -2716,8 +2716,8 @@ for iRun = 1:n_total_runs
                 % model variables
                 if mod_dispE.mdl_n ~= 0
                     % ressource
-                    if ismember(mod_dispE.X_pred,[5,6])
-                        [n_prm, prm_idx, bf_idx] = update_n_prm(n_prm, prm_idx, task_nm, run_nm, nBperR, [task_id,'mod_dispE_X_pred',trialType_nm], bf_idx, sub_nm);
+                    if ismember(mod_dispE.E_pred,[5,6])
+                        [n_prm, prm_idx, bf_idx] = update_n_prm(n_prm, prm_idx, task_nm, run_nm, nBperR, [task_id,'mod_dispE_E_pred',trialType_nm], bf_idx, sub_nm);
                     end
                 end
                 
@@ -2756,8 +2756,8 @@ for iRun = 1:n_total_runs
                 if mod_dispE.mdl_n ~= 0
                     
                     % ressource
-                    if ismember(mod_dispE.X_pred,[3,4])
-                        [n_prm, prm_idx, bf_idx] = update_n_prm(n_prm, prm_idx, task_nm, run_nm, nBperR, [task_id,'mod_dispE_X_pred',trialType_nm], bf_idx, sub_nm);
+                    if ismember(mod_dispE.E_pred,[3,4])
+                        [n_prm, prm_idx, bf_idx] = update_n_prm(n_prm, prm_idx, task_nm, run_nm, nBperR, [task_id,'mod_dispE_E_pred',trialType_nm], bf_idx, sub_nm);
                     end
                 
                     % cost
@@ -2802,8 +2802,8 @@ for iRun = 1:n_total_runs
                 end
                 
                 % ressource
-                if ismember(mod_dispE.X_pred,[1,2])
-                    [n_prm, prm_idx, bf_idx] = update_n_prm(n_prm, prm_idx, task_nm, run_nm, nBperR, [task_id,'mod_dispE_X_pred',trialType_nm], bf_idx, sub_nm);
+                if ismember(mod_dispE.E_pred,[1,2])
+                    [n_prm, prm_idx, bf_idx] = update_n_prm(n_prm, prm_idx, task_nm, run_nm, nBperR, [task_id,'mod_dispE_E_pred',trialType_nm], bf_idx, sub_nm);
                 end
                 
                 % performance
@@ -2966,8 +2966,8 @@ for iRun = 1:n_total_runs
                 end
                 
                 % ressource
-                if mod_fbk.X_pred ~= 0 && ismember(mod_fbk.X_pred,[5,6])
-                    [n_prm, prm_idx, bf_idx] = update_n_prm(n_prm, prm_idx, task_nm, run_nm, nBperR, [task_id,'mod_fbk_X_pred'], bf_idx, sub_nm);
+                if mod_fbk.E_pred ~= 0 && ismember(mod_fbk.E_pred,[5,6])
+                    [n_prm, prm_idx, bf_idx] = update_n_prm(n_prm, prm_idx, task_nm, run_nm, nBperR, [task_id,'mod_fbk_E_pred'], bf_idx, sub_nm);
                 end
 
                 % feedback current trial
@@ -2981,8 +2981,8 @@ for iRun = 1:n_total_runs
                 end
                 
                 % ressource
-                if mod_fbk.X_pred ~= 0 && ismember(mod_fbk.X_pred,[3,4])
-                    [n_prm, prm_idx, bf_idx] = update_n_prm(n_prm, prm_idx, task_nm, run_nm, nBperR, [task_id,'mod_fbk_X_pred'], bf_idx, sub_nm);
+                if mod_fbk.E_pred ~= 0 && ismember(mod_fbk.E_pred,[3,4])
+                    [n_prm, prm_idx, bf_idx] = update_n_prm(n_prm, prm_idx, task_nm, run_nm, nBperR, [task_id,'mod_fbk_E_pred'], bf_idx, sub_nm);
                 end
                 
                 % performance
@@ -3018,8 +3018,8 @@ for iRun = 1:n_total_runs
                 end
 
                 % ressource
-                if mod_fbk.X_pred ~= 0 && ismember(mod_fbk.X_pred,[5,6])
-                    [n_prm, prm_idx, bf_idx] = update_n_prm(n_prm, prm_idx, task_nm, run_nm, nBperR, [task_id,'mod_fbk_X_pred',trialType_nm], bf_idx, sub_nm);
+                if mod_fbk.E_pred ~= 0 && ismember(mod_fbk.E_pred,[5,6])
+                    [n_prm, prm_idx, bf_idx] = update_n_prm(n_prm, prm_idx, task_nm, run_nm, nBperR, [task_id,'mod_fbk_E_pred',trialType_nm], bf_idx, sub_nm);
                 end
                 
                 % feedback current trial
@@ -3033,8 +3033,8 @@ for iRun = 1:n_total_runs
                 end
                 
                 % ressource
-                if mod_fbk.X_pred ~= 0 && ismember(mod_fbk.X_pred,[3,4])
-                    [n_prm, prm_idx, bf_idx] = update_n_prm(n_prm, prm_idx, task_nm, run_nm, nBperR, [task_id,'mod_fbk_X_pred',trialType_nm], bf_idx, sub_nm);
+                if mod_fbk.E_pred ~= 0 && ismember(mod_fbk.E_pred,[3,4])
+                    [n_prm, prm_idx, bf_idx] = update_n_prm(n_prm, prm_idx, task_nm, run_nm, nBperR, [task_id,'mod_fbk_E_pred',trialType_nm], bf_idx, sub_nm);
                 end
                 
                 % performance
@@ -3069,8 +3069,8 @@ for iRun = 1:n_total_runs
                 end
 
                 % ressource
-                if mod_fbk.X_pred ~= 0 && ismember(mod_fbk.X_pred,[5,6])
-                    [n_prm, prm_idx, bf_idx] = update_n_prm(n_prm, prm_idx, task_nm, run_nm, nBperR, [task_id,'mod_fbk_X_pred',trialType_nm], bf_idx, sub_nm);
+                if mod_fbk.E_pred ~= 0 && ismember(mod_fbk.E_pred,[5,6])
+                    [n_prm, prm_idx, bf_idx] = update_n_prm(n_prm, prm_idx, task_nm, run_nm, nBperR, [task_id,'mod_fbk_E_pred',trialType_nm], bf_idx, sub_nm);
                 end
                 
                 % feedback current trial
@@ -3084,8 +3084,8 @@ for iRun = 1:n_total_runs
                 end
                 
                 % ressource
-                if mod_fbk.X_pred ~= 0 && ismember(mod_fbk.X_pred,[3,4])
-                    [n_prm, prm_idx, bf_idx] = update_n_prm(n_prm, prm_idx, task_nm, run_nm, nBperR, [task_id,'mod_fbk_X_pred',trialType_nm], bf_idx, sub_nm);
+                if mod_fbk.E_pred ~= 0 && ismember(mod_fbk.E_pred,[3,4])
+                    [n_prm, prm_idx, bf_idx] = update_n_prm(n_prm, prm_idx, task_nm, run_nm, nBperR, [task_id,'mod_fbk_E_pred',trialType_nm], bf_idx, sub_nm);
                 end
                 
                 % performance
@@ -3161,8 +3161,8 @@ for iRun = 1:n_total_runs
                 % model variables
                 if mod_inc.mdl_n ~= 0
                     % ressource
-                    if ismember(mod_inc.X_pred,[5,6])
-                        [n_prm, prm_idx, bf_idx] = update_n_prm(n_prm, prm_idx, task_nm, run_nm, nBperR, [task_id,'mod_inc_X_pred'], bf_idx, sub_nm);
+                    if ismember(mod_inc.E_pred,[5,6])
+                        [n_prm, prm_idx, bf_idx] = update_n_prm(n_prm, prm_idx, task_nm, run_nm, nBperR, [task_id,'mod_inc_E_pred'], bf_idx, sub_nm);
                     end
                 end
                 
@@ -3211,8 +3211,8 @@ for iRun = 1:n_total_runs
                 if mod_inc.mdl_n ~= 0
                     
                     % ressource
-                    if ismember(mod_inc.X_pred,[3,4])
-                        [n_prm, prm_idx, bf_idx] = update_n_prm(n_prm, prm_idx, task_nm, run_nm, nBperR, [task_id,'mod_inc_X_pred'], bf_idx, sub_nm);
+                    if ismember(mod_inc.E_pred,[3,4])
+                        [n_prm, prm_idx, bf_idx] = update_n_prm(n_prm, prm_idx, task_nm, run_nm, nBperR, [task_id,'mod_inc_E_pred'], bf_idx, sub_nm);
                     end
                 
                     % cost
@@ -3272,8 +3272,8 @@ for iRun = 1:n_total_runs
                 end
                 
                 % ressource
-                if ismember(mod_inc.X_pred,[1,2])
-                    [n_prm, prm_idx, bf_idx] = update_n_prm(n_prm, prm_idx, task_nm, run_nm, nBperR, [task_id,'mod_inc_X_pred'], bf_idx, sub_nm);
+                if ismember(mod_inc.E_pred,[1,2])
+                    [n_prm, prm_idx, bf_idx] = update_n_prm(n_prm, prm_idx, task_nm, run_nm, nBperR, [task_id,'mod_inc_E_pred'], bf_idx, sub_nm);
                 end
                 
                 % performance
@@ -3306,8 +3306,8 @@ for iRun = 1:n_total_runs
                 % model variables
                 if mod_inc.mdl_n ~= 0
                     % ressource
-                    if ismember(mod_inc.X_pred,[5,6])
-                        [n_prm, prm_idx, bf_idx] = update_n_prm(n_prm, prm_idx, task_nm, run_nm, nBperR, [task_id,'mod_inc_X_pred',trialType_nm], bf_idx, sub_nm);
+                    if ismember(mod_inc.E_pred,[5,6])
+                        [n_prm, prm_idx, bf_idx] = update_n_prm(n_prm, prm_idx, task_nm, run_nm, nBperR, [task_id,'mod_inc_E_pred',trialType_nm], bf_idx, sub_nm);
                     end
                 end
                 
@@ -3356,8 +3356,8 @@ for iRun = 1:n_total_runs
                 if mod_inc.mdl_n ~= 0
                     
                     % ressource
-                    if ismember(mod_inc.X_pred,[3,4])
-                        [n_prm, prm_idx, bf_idx] = update_n_prm(n_prm, prm_idx, task_nm, run_nm, nBperR, [task_id,'mod_inc_X_pred',trialType_nm], bf_idx, sub_nm);
+                    if ismember(mod_inc.E_pred,[3,4])
+                        [n_prm, prm_idx, bf_idx] = update_n_prm(n_prm, prm_idx, task_nm, run_nm, nBperR, [task_id,'mod_inc_E_pred',trialType_nm], bf_idx, sub_nm);
                     end
                     
                     % cost
@@ -3417,8 +3417,8 @@ for iRun = 1:n_total_runs
                 end
                 
                 % ressource
-                if ismember(mod_inc.X_pred,[1,2])
-                    [n_prm, prm_idx, bf_idx] = update_n_prm(n_prm, prm_idx, task_nm, run_nm, nBperR, [task_id,'mod_inc_X_pred',trialType_nm], bf_idx, sub_nm);
+                if ismember(mod_inc.E_pred,[1,2])
+                    [n_prm, prm_idx, bf_idx] = update_n_prm(n_prm, prm_idx, task_nm, run_nm, nBperR, [task_id,'mod_inc_E_pred',trialType_nm], bf_idx, sub_nm);
                 end
                 
                 % performance
@@ -3450,8 +3450,8 @@ for iRun = 1:n_total_runs
                 % model variables
                 if mod_inc.mdl_n ~= 0
                     % ressource
-                    if ismember(mod_inc.X_pred,[5,6])
-                        [n_prm, prm_idx, bf_idx] = update_n_prm(n_prm, prm_idx, task_nm, run_nm, nBperR, [task_id,'mod_inc_X_pred',trialType_nm], bf_idx, sub_nm);
+                    if ismember(mod_inc.E_pred,[5,6])
+                        [n_prm, prm_idx, bf_idx] = update_n_prm(n_prm, prm_idx, task_nm, run_nm, nBperR, [task_id,'mod_inc_E_pred',trialType_nm], bf_idx, sub_nm);
                     end
                 end
                 
@@ -3500,8 +3500,8 @@ for iRun = 1:n_total_runs
                 if mod_inc.mdl_n ~= 0
                     
                     % ressource
-                    if ismember(mod_inc.X_pred,[3,4])
-                        [n_prm, prm_idx, bf_idx] = update_n_prm(n_prm, prm_idx, task_nm, run_nm, nBperR, [task_id,'mod_inc_X_pred',trialType_nm], bf_idx, sub_nm);
+                    if ismember(mod_inc.E_pred,[3,4])
+                        [n_prm, prm_idx, bf_idx] = update_n_prm(n_prm, prm_idx, task_nm, run_nm, nBperR, [task_id,'mod_inc_E_pred',trialType_nm], bf_idx, sub_nm);
                     end
                     
                     % cost
@@ -3561,8 +3561,8 @@ for iRun = 1:n_total_runs
                 end
                 
                 % ressource
-                if ismember(mod_inc.X_pred,[1,2])
-                    [n_prm, prm_idx, bf_idx] = update_n_prm(n_prm, prm_idx, task_nm, run_nm, nBperR, [task_id,'mod_inc_X_pred',trialType_nm], bf_idx, sub_nm);
+                if ismember(mod_inc.E_pred,[1,2])
+                    [n_prm, prm_idx, bf_idx] = update_n_prm(n_prm, prm_idx, task_nm, run_nm, nBperR, [task_id,'mod_inc_E_pred',trialType_nm], bf_idx, sub_nm);
                 end
                 
                 % performance
@@ -3600,8 +3600,8 @@ for iRun = 1:n_total_runs
                 % model variables
                 if mod_inc.mdl_n ~= 0
                     % ressource
-                    if ismember(mod_inc.X_pred,[5,6])
-                        [n_prm, prm_idx, bf_idx] = update_n_prm(n_prm, prm_idx, task_nm, run_nm, nBperR, [task_id,'mod_inc_X_pred',trialType_nm], bf_idx, sub_nm);
+                    if ismember(mod_inc.E_pred,[5,6])
+                        [n_prm, prm_idx, bf_idx] = update_n_prm(n_prm, prm_idx, task_nm, run_nm, nBperR, [task_id,'mod_inc_E_pred',trialType_nm], bf_idx, sub_nm);
                     end
                 end
                 
@@ -3647,8 +3647,8 @@ for iRun = 1:n_total_runs
                 if mod_inc.mdl_n ~= 0
                     
                     % ressource
-                    if ismember(mod_inc.X_pred,[3,4])
-                        [n_prm, prm_idx, bf_idx] = update_n_prm(n_prm, prm_idx, task_nm, run_nm, nBperR, [task_id,'mod_inc_X_pred',trialType_nm], bf_idx, sub_nm);
+                    if ismember(mod_inc.E_pred,[3,4])
+                        [n_prm, prm_idx, bf_idx] = update_n_prm(n_prm, prm_idx, task_nm, run_nm, nBperR, [task_id,'mod_inc_E_pred',trialType_nm], bf_idx, sub_nm);
                     end
                     
                     % cost
@@ -3708,8 +3708,8 @@ for iRun = 1:n_total_runs
                 end
                 
                 % ressource
-                if ismember(mod_inc.X_pred,[1,2])
-                    [n_prm, prm_idx, bf_idx] = update_n_prm(n_prm, prm_idx, task_nm, run_nm, nBperR, [task_id,'mod_inc_X_pred',trialType_nm], bf_idx, sub_nm);
+                if ismember(mod_inc.E_pred,[1,2])
+                    [n_prm, prm_idx, bf_idx] = update_n_prm(n_prm, prm_idx, task_nm, run_nm, nBperR, [task_id,'mod_inc_E_pred',trialType_nm], bf_idx, sub_nm);
                 end
                 
                 % performance
@@ -3746,8 +3746,8 @@ for iRun = 1:n_total_runs
                 % model variables
                 if mod_inc.mdl_n ~= 0
                     % ressource
-                    if ismember(mod_inc.X_pred,[5,6])
-                        [n_prm, prm_idx, bf_idx] = update_n_prm(n_prm, prm_idx, task_nm, run_nm, nBperR, [task_id,'mod_inc_X_pred',trialType_nm], bf_idx, sub_nm);
+                    if ismember(mod_inc.E_pred,[5,6])
+                        [n_prm, prm_idx, bf_idx] = update_n_prm(n_prm, prm_idx, task_nm, run_nm, nBperR, [task_id,'mod_inc_E_pred',trialType_nm], bf_idx, sub_nm);
                     end
                 end
                 
@@ -3796,8 +3796,8 @@ for iRun = 1:n_total_runs
                 if mod_inc.mdl_n ~= 0
                     
                     % ressource
-                    if ismember(mod_inc.X_pred,[3,4])
-                        [n_prm, prm_idx, bf_idx] = update_n_prm(n_prm, prm_idx, task_nm, run_nm, nBperR, [task_id,'mod_inc_X_pred',trialType_nm], bf_idx, sub_nm);
+                    if ismember(mod_inc.E_pred,[3,4])
+                        [n_prm, prm_idx, bf_idx] = update_n_prm(n_prm, prm_idx, task_nm, run_nm, nBperR, [task_id,'mod_inc_E_pred',trialType_nm], bf_idx, sub_nm);
                     end
                 
                     % cost
@@ -3857,8 +3857,8 @@ for iRun = 1:n_total_runs
                 end
                 
                 % ressource
-                if ismember(mod_inc.X_pred,[1,2])
-                    [n_prm, prm_idx, bf_idx] = update_n_prm(n_prm, prm_idx, task_nm, run_nm, nBperR, [task_id,'mod_inc_X_pred',trialType_nm], bf_idx, sub_nm);
+                if ismember(mod_inc.E_pred,[1,2])
+                    [n_prm, prm_idx, bf_idx] = update_n_prm(n_prm, prm_idx, task_nm, run_nm, nBperR, [task_id,'mod_inc_E_pred',trialType_nm], bf_idx, sub_nm);
                 end
                 
                 % performance
@@ -3900,8 +3900,8 @@ for iRun = 1:n_total_runs
                 % model variables
                 if mod_dispE.mdl_n ~= 0
                     % ressource
-                    if ismember(mod_dispE.X_pred,[5,6])
-                        [n_prm, prm_idx, bf_idx] = update_n_prm(n_prm, prm_idx, task_nm, run_nm, nBperR, [task_id,'mod_dispE_X_pred'], bf_idx, sub_nm);
+                    if ismember(mod_dispE.E_pred,[5,6])
+                        [n_prm, prm_idx, bf_idx] = update_n_prm(n_prm, prm_idx, task_nm, run_nm, nBperR, [task_id,'mod_dispE_E_pred'], bf_idx, sub_nm);
                     end
                 end
                 
@@ -3955,8 +3955,8 @@ for iRun = 1:n_total_runs
                 if mod_dispE.mdl_n ~= 0
                     
                     % ressource
-                    if ismember(mod_dispE.X_pred,[3,4])
-                        [n_prm, prm_idx, bf_idx] = update_n_prm(n_prm, prm_idx, task_nm, run_nm, nBperR, [task_id,'mod_dispE_X_pred'], bf_idx, sub_nm);
+                    if ismember(mod_dispE.E_pred,[3,4])
+                        [n_prm, prm_idx, bf_idx] = update_n_prm(n_prm, prm_idx, task_nm, run_nm, nBperR, [task_id,'mod_dispE_E_pred'], bf_idx, sub_nm);
                     end
                 
                     % cost
@@ -4001,8 +4001,8 @@ for iRun = 1:n_total_runs
                 end
                 
                 % ressource
-                if ismember(mod_dispE.X_pred,[1,2])
-                    [n_prm, prm_idx, bf_idx] = update_n_prm(n_prm, prm_idx, task_nm, run_nm, nBperR, [task_id,'mod_dispE_X_pred'], bf_idx, sub_nm);
+                if ismember(mod_dispE.E_pred,[1,2])
+                    [n_prm, prm_idx, bf_idx] = update_n_prm(n_prm, prm_idx, task_nm, run_nm, nBperR, [task_id,'mod_dispE_E_pred'], bf_idx, sub_nm);
                 end
                 
                 % performance
@@ -4035,8 +4035,8 @@ for iRun = 1:n_total_runs
                 % model variables
                 if mod_dispE.mdl_n ~= 0
                     % ressource
-                    if ismember(mod_dispE.X_pred,[5,6])
-                        [n_prm, prm_idx, bf_idx] = update_n_prm(n_prm, prm_idx, task_nm, run_nm, nBperR, [task_id,'mod_dispE_X_pred',trialType_nm], bf_idx, sub_nm);
+                    if ismember(mod_dispE.E_pred,[5,6])
+                        [n_prm, prm_idx, bf_idx] = update_n_prm(n_prm, prm_idx, task_nm, run_nm, nBperR, [task_id,'mod_dispE_E_pred',trialType_nm], bf_idx, sub_nm);
                     end
                 end
 
@@ -4090,8 +4090,8 @@ for iRun = 1:n_total_runs
                 if mod_dispE.mdl_n ~= 0
                     
                     % ressource
-                    if ismember(mod_dispE.X_pred,[3,4])
-                        [n_prm, prm_idx, bf_idx] = update_n_prm(n_prm, prm_idx, task_nm, run_nm, nBperR, [task_id,'mod_dispE_X_pred',trialType_nm], bf_idx, sub_nm);
+                    if ismember(mod_dispE.E_pred,[3,4])
+                        [n_prm, prm_idx, bf_idx] = update_n_prm(n_prm, prm_idx, task_nm, run_nm, nBperR, [task_id,'mod_dispE_E_pred',trialType_nm], bf_idx, sub_nm);
                     end
                     
                     % cost
@@ -4136,8 +4136,8 @@ for iRun = 1:n_total_runs
                 end
                 
                 % ressource
-                if ismember(mod_dispE.X_pred,[1,2])
-                    [n_prm, prm_idx, bf_idx] = update_n_prm(n_prm, prm_idx, task_nm, run_nm, nBperR, [task_id,'mod_dispE_X_pred',trialType_nm], bf_idx, sub_nm);
+                if ismember(mod_dispE.E_pred,[1,2])
+                    [n_prm, prm_idx, bf_idx] = update_n_prm(n_prm, prm_idx, task_nm, run_nm, nBperR, [task_id,'mod_dispE_E_pred',trialType_nm], bf_idx, sub_nm);
                 end
                 
                 % performance
@@ -4169,8 +4169,8 @@ for iRun = 1:n_total_runs
                 % model variables
                 if mod_dispE.mdl_n ~= 0
                     % ressource
-                    if ismember(mod_dispE.X_pred,[5,6])
-                        [n_prm, prm_idx, bf_idx] = update_n_prm(n_prm, prm_idx, task_nm, run_nm, nBperR, [task_id,'mod_dispE_X_pred',trialType_nm], bf_idx, sub_nm);
+                    if ismember(mod_dispE.E_pred,[5,6])
+                        [n_prm, prm_idx, bf_idx] = update_n_prm(n_prm, prm_idx, task_nm, run_nm, nBperR, [task_id,'mod_dispE_E_pred',trialType_nm], bf_idx, sub_nm);
                     end
                 end
                 
@@ -4224,8 +4224,8 @@ for iRun = 1:n_total_runs
                 if mod_dispE.mdl_n ~= 0
                     
                     % ressource
-                    if ismember(mod_dispE.X_pred,[3,4])
-                        [n_prm, prm_idx, bf_idx] = update_n_prm(n_prm, prm_idx, task_nm, run_nm, nBperR, [task_id,'mod_dispE_X_pred',trialType_nm], bf_idx, sub_nm);
+                    if ismember(mod_dispE.E_pred,[3,4])
+                        [n_prm, prm_idx, bf_idx] = update_n_prm(n_prm, prm_idx, task_nm, run_nm, nBperR, [task_id,'mod_dispE_E_pred',trialType_nm], bf_idx, sub_nm);
                     end
                     
                     % cost
@@ -4270,8 +4270,8 @@ for iRun = 1:n_total_runs
                 end
                 
                 % ressource
-                if ismember(mod_dispE.X_pred,[1,2])
-                    [n_prm, prm_idx, bf_idx] = update_n_prm(n_prm, prm_idx, task_nm, run_nm, nBperR, [task_id,'mod_dispE_X_pred',trialType_nm], bf_idx, sub_nm);
+                if ismember(mod_dispE.E_pred,[1,2])
+                    [n_prm, prm_idx, bf_idx] = update_n_prm(n_prm, prm_idx, task_nm, run_nm, nBperR, [task_id,'mod_dispE_E_pred',trialType_nm], bf_idx, sub_nm);
                 end
                 
                 % performance
@@ -4309,8 +4309,8 @@ for iRun = 1:n_total_runs
                 % model variables
                 if mod_dispE.mdl_n ~= 0
                     % ressource
-                    if ismember(mod_dispE.X_pred,[5,6])
-                        [n_prm, prm_idx, bf_idx] = update_n_prm(n_prm, prm_idx, task_nm, run_nm, nBperR, [task_id,'mod_dispE_X_pred',trialType_nm], bf_idx, sub_nm);
+                    if ismember(mod_dispE.E_pred,[5,6])
+                        [n_prm, prm_idx, bf_idx] = update_n_prm(n_prm, prm_idx, task_nm, run_nm, nBperR, [task_id,'mod_dispE_E_pred',trialType_nm], bf_idx, sub_nm);
                     end
                 end
 
@@ -4361,8 +4361,8 @@ for iRun = 1:n_total_runs
                 if mod_dispE.mdl_n ~= 0
                     
                     % ressource
-                    if ismember(mod_dispE.X_pred,[3,4])
-                        [n_prm, prm_idx, bf_idx] = update_n_prm(n_prm, prm_idx, task_nm, run_nm, nBperR, [task_id,'mod_dispE_X_pred',trialType_nm], bf_idx, sub_nm);
+                    if ismember(mod_dispE.E_pred,[3,4])
+                        [n_prm, prm_idx, bf_idx] = update_n_prm(n_prm, prm_idx, task_nm, run_nm, nBperR, [task_id,'mod_dispE_E_pred',trialType_nm], bf_idx, sub_nm);
                     end
                     
                     % cost
@@ -4389,7 +4389,7 @@ for iRun = 1:n_total_runs
                 % mean RT across pairs (except first pair)
                 if mod_dispE.RT_mRT ~= 0
                     [n_prm, prm_idx, bf_idx] = update_n_prm(n_prm, prm_idx, task_nm, run_nm, nBperR, [task_id,'mod_dispE_RT_mRT',trialType_nm], bf_idx, sub_nm);
-                end
+                endx_
                 
                 % luminance (last)
                 if ismember(mod_dispE.lum,[1,3,5,7])
@@ -4407,8 +4407,8 @@ for iRun = 1:n_total_runs
                 end
                 
                 % ressource
-                if ismember(mod_dispE.X_pred,[1,2])
-                    [n_prm, prm_idx, bf_idx] = update_n_prm(n_prm, prm_idx, task_nm, run_nm, nBperR, [task_id,'mod_dispE_X_pred',trialType_nm], bf_idx, sub_nm);
+                if ismember(mod_dispE.E_pred,[1,2])
+                    [n_prm, prm_idx, bf_idx] = update_n_prm(n_prm, prm_idx, task_nm, run_nm, nBperR, [task_id,'mod_dispE_E_pred',trialType_nm], bf_idx, sub_nm);
                 end
                 
                 % performance
@@ -4445,8 +4445,8 @@ for iRun = 1:n_total_runs
                 % model variables
                 if mod_dispE.mdl_n ~= 0
                     % ressource
-                    if ismember(mod_dispE.X_pred,[5,6])
-                        [n_prm, prm_idx, bf_idx] = update_n_prm(n_prm, prm_idx, task_nm, run_nm, nBperR, [task_id,'mod_dispE_X_pred',trialType_nm], bf_idx, sub_nm);
+                    if ismember(mod_dispE.E_pred,[5,6])
+                        [n_prm, prm_idx, bf_idx] = update_n_prm(n_prm, prm_idx, task_nm, run_nm, nBperR, [task_id,'mod_dispE_E_pred',trialType_nm], bf_idx, sub_nm);
                     end
                 end
 
@@ -4500,8 +4500,8 @@ for iRun = 1:n_total_runs
                 if mod_dispE.mdl_n ~= 0
                     
                     % ressource
-                    if ismember(mod_dispE.X_pred,[3,4])
-                        [n_prm, prm_idx, bf_idx] = update_n_prm(n_prm, prm_idx, task_nm, run_nm, nBperR, [task_id,'mod_dispE_X_pred',trialType_nm], bf_idx, sub_nm);
+                    if ismember(mod_dispE.E_pred,[3,4])
+                        [n_prm, prm_idx, bf_idx] = update_n_prm(n_prm, prm_idx, task_nm, run_nm, nBperR, [task_id,'mod_dispE_E_pred',trialType_nm], bf_idx, sub_nm);
                     end
                     
                     % cost
@@ -4546,8 +4546,8 @@ for iRun = 1:n_total_runs
                 end
                 
                 % ressource
-                if ismember(mod_dispE.X_pred,[1,2])
-                    [n_prm, prm_idx, bf_idx] = update_n_prm(n_prm, prm_idx, task_nm, run_nm, nBperR, [task_id,'mod_dispE_X_pred',trialType_nm], bf_idx, sub_nm);
+                if ismember(mod_dispE.E_pred,[1,2])
+                    [n_prm, prm_idx, bf_idx] = update_n_prm(n_prm, prm_idx, task_nm, run_nm, nBperR, [task_id,'mod_dispE_E_pred',trialType_nm], bf_idx, sub_nm);
                 end
                 
                 % performance
@@ -4866,8 +4866,8 @@ for iRun = 1:n_total_runs
                 end
 
                 % ressource
-                if mod_fbk.X_pred ~= 0 && ismember(mod_fbk.X_pred,[5,6])
-                    [n_prm, prm_idx, bf_idx] = update_n_prm(n_prm, prm_idx, task_nm, run_nm, nBperR, [task_id,'mod_fbk_X_pred'], bf_idx, sub_nm);
+                if mod_fbk.E_pred ~= 0 && ismember(mod_fbk.E_pred,[5,6])
+                    [n_prm, prm_idx, bf_idx] = update_n_prm(n_prm, prm_idx, task_nm, run_nm, nBperR, [task_id,'mod_fbk_E_pred'], bf_idx, sub_nm);
                 end
                 
                 % feedback current trial
@@ -4881,8 +4881,8 @@ for iRun = 1:n_total_runs
                 end
                 
                 % ressource
-                if mod_fbk.X_pred ~= 0 && ismember(mod_fbk.X_pred,[1,2,3,4])
-                    [n_prm, prm_idx, bf_idx] = update_n_prm(n_prm, prm_idx, task_nm, run_nm, nBperR, [task_id,'mod_fbk_X_pred'], bf_idx, sub_nm);
+                if mod_fbk.E_pred ~= 0 && ismember(mod_fbk.E_pred,[1,2,3,4])
+                    [n_prm, prm_idx, bf_idx] = update_n_prm(n_prm, prm_idx, task_nm, run_nm, nBperR, [task_id,'mod_fbk_E_pred'], bf_idx, sub_nm);
                 end
                 
                 % performance
@@ -4918,8 +4918,8 @@ for iRun = 1:n_total_runs
                 end
 
                 % ressource
-                if mod_fbk.X_pred ~= 0 && ismember(mod_fbk.X_pred,[5,6])
-                    [n_prm, prm_idx, bf_idx] = update_n_prm(n_prm, prm_idx, task_nm, run_nm, nBperR, [task_id,'mod_fbk_X_pred',trialType_nm], bf_idx, sub_nm);
+                if mod_fbk.E_pred ~= 0 && ismember(mod_fbk.E_pred,[5,6])
+                    [n_prm, prm_idx, bf_idx] = update_n_prm(n_prm, prm_idx, task_nm, run_nm, nBperR, [task_id,'mod_fbk_E_pred',trialType_nm], bf_idx, sub_nm);
                 end
                 
                 % feedback current trial
@@ -4933,8 +4933,8 @@ for iRun = 1:n_total_runs
                 end
                 
                 % ressource
-                if mod_fbk.X_pred ~= 0 && ismember(mod_fbk.X_pred,[1,2,3,4])
-                    [n_prm, prm_idx, bf_idx] = update_n_prm(n_prm, prm_idx, task_nm, run_nm, nBperR, [task_id,'mod_fbk_X_pred',trialType_nm], bf_idx, sub_nm);
+                if mod_fbk.E_pred ~= 0 && ismember(mod_fbk.E_pred,[1,2,3,4])
+                    [n_prm, prm_idx, bf_idx] = update_n_prm(n_prm, prm_idx, task_nm, run_nm, nBperR, [task_id,'mod_fbk_E_pred',trialType_nm], bf_idx, sub_nm);
                 end
                 
                 % performance
@@ -4969,8 +4969,8 @@ for iRun = 1:n_total_runs
                 end
 
                 % ressource
-                if mod_fbk.X_pred ~= 0 && ismember(mod_fbk.X_pred,[5,6])
-                    [n_prm, prm_idx, bf_idx] = update_n_prm(n_prm, prm_idx, task_nm, run_nm, nBperR, [task_id,'mod_fbk_X_pred',trialType_nm], bf_idx, sub_nm);
+                if mod_fbk.E_pred ~= 0 && ismember(mod_fbk.E_pred,[5,6])
+                    [n_prm, prm_idx, bf_idx] = update_n_prm(n_prm, prm_idx, task_nm, run_nm, nBperR, [task_id,'mod_fbk_E_pred',trialType_nm], bf_idx, sub_nm);
                 end
                 
                 % feedback current trial
@@ -4984,8 +4984,8 @@ for iRun = 1:n_total_runs
                 end
                 
                 % ressource
-                if mod_fbk.X_pred ~= 0 && ismember(mod_fbk.X_pred,[1,2,3,4])
-                    [n_prm, prm_idx, bf_idx] = update_n_prm(n_prm, prm_idx, task_nm, run_nm, nBperR, [task_id,'mod_fbk_X_pred',trialType_nm], bf_idx, sub_nm);
+                if mod_fbk.E_pred ~= 0 && ismember(mod_fbk.E_pred,[1,2,3,4])
+                    [n_prm, prm_idx, bf_idx] = update_n_prm(n_prm, prm_idx, task_nm, run_nm, nBperR, [task_id,'mod_fbk_E_pred',trialType_nm], bf_idx, sub_nm);
                 end
                 
                 % performance
@@ -5026,8 +5026,8 @@ for iRun = 1:n_total_runs
                 end
 
                 % ressource
-                if mod_fbk.X_pred ~= 0 && ismember(mod_fbk.X_pred,[5,6])
-                    [n_prm, prm_idx, bf_idx] = update_n_prm(n_prm, prm_idx, task_nm, run_nm, nBperR, [task_id,'mod_fbk_X_pred',trialType_nm], bf_idx, sub_nm);
+                if mod_fbk.E_pred ~= 0 && ismember(mod_fbk.E_pred,[5,6])
+                    [n_prm, prm_idx, bf_idx] = update_n_prm(n_prm, prm_idx, task_nm, run_nm, nBperR, [task_id,'mod_fbk_E_pred',trialType_nm], bf_idx, sub_nm);
                 end
                 
                 % feedback current trial
@@ -5041,8 +5041,8 @@ for iRun = 1:n_total_runs
                 end
                 
                 % ressource
-                if mod_fbk.X_pred ~= 0 && ismember(mod_fbk.X_pred,[1,2,3,4])
-                    [n_prm, prm_idx, bf_idx] = update_n_prm(n_prm, prm_idx, task_nm, run_nm, nBperR, [task_id,'mod_fbk_X_pred',trialType_nm], bf_idx, sub_nm);
+                if mod_fbk.E_pred ~= 0 && ismember(mod_fbk.E_pred,[1,2,3,4])
+                    [n_prm, prm_idx, bf_idx] = update_n_prm(n_prm, prm_idx, task_nm, run_nm, nBperR, [task_id,'mod_fbk_E_pred',trialType_nm], bf_idx, sub_nm);
                 end
                 
                 % performance
@@ -5082,8 +5082,8 @@ for iRun = 1:n_total_runs
                 end
 
                 % ressource
-                if mod_fbk.X_pred ~= 0 && ismember(mod_fbk.X_pred,[5,6])
-                    [n_prm, prm_idx, bf_idx] = update_n_prm(n_prm, prm_idx, task_nm, run_nm, nBperR, [task_id,'mod_fbk_X_pred',trialType_nm], bf_idx, sub_nm);
+                if mod_fbk.E_pred ~= 0 && ismember(mod_fbk.E_pred,[5,6])
+                    [n_prm, prm_idx, bf_idx] = update_n_prm(n_prm, prm_idx, task_nm, run_nm, nBperR, [task_id,'mod_fbk_E_pred',trialType_nm], bf_idx, sub_nm);
                 end
                 
                 % feedback current trial
@@ -5097,8 +5097,8 @@ for iRun = 1:n_total_runs
                 end
                 
                 % ressource
-                if mod_fbk.X_pred ~= 0 && ismember(mod_fbk.X_pred,[1,2,3,4])
-                    [n_prm, prm_idx, bf_idx] = update_n_prm(n_prm, prm_idx, task_nm, run_nm, nBperR, [task_id,'mod_fbk_X_pred',trialType_nm], bf_idx, sub_nm);
+                if mod_fbk.E_pred ~= 0 && ismember(mod_fbk.E_pred,[1,2,3,4])
+                    [n_prm, prm_idx, bf_idx] = update_n_prm(n_prm, prm_idx, task_nm, run_nm, nBperR, [task_id,'mod_fbk_E_pred',trialType_nm], bf_idx, sub_nm);
                 end
                 
                 % performance

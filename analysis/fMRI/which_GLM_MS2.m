@@ -214,7 +214,7 @@ function [ GLMprm, n_prm ] = which_GLM_MS2(GLM)
 %% GS.mod_inc.inc_x_trialN
 % (1) incentive*trial number (raw)
 %
-%% GS.mod_inc.X_pred
+%% GS.mod_inc.E_pred
 % (1) predicted ressource with actual performance as input (after EV)
 % (2) predicted ressource with predicted performance as input (after EV)
 % (3) same as (1) but placed just before benefit/cost/EV variables
@@ -353,7 +353,7 @@ function [ GLMprm, n_prm ] = which_GLM_MS2(GLM)
 %% GS.mod_dispE.inc_x_trialN
 % (1) incentive*trial number (raw)
 %
-%% GS.mod_dispE.X_pred
+%% GS.mod_dispE.E_pred
 % (1) predicted ressource with actual performance as input (after EV)
 % (2) predicted ressource with predicted performance as input (after EV)
 % (3) same as (1) but placed just before  benefit/cost/EV variables
@@ -452,7 +452,7 @@ function [ GLMprm, n_prm ] = which_GLM_MS2(GLM)
 % and/or EV term and/or perf(See MS2_GS_Festimation_model_space.m for the details of
 % each model)
 %
-%% GS.mod_fbk.X_pred
+%% GS.mod_fbk.E_pred
 % (1) predicted ressource with actual performance as input (after EV)
 % (2) predicted ressource with predicted performance as input (after EV)
 % (3) same as (1) but placed just before  benefit/cost/EV variables
@@ -832,8 +832,8 @@ switch GLM
         % grip
         grip.o_inc = 1;
         grip.dur_inc = 0;
-        grip.mod_inc.mdl_n = 96;
-        grip.mod_inc.X_pred = 6;
+        grip.mod_inc.mdl_n = 1;
+        grip.mod_inc.E_pred = 6;
         grip.mod_inc.RT_fp = 1;
         grip.o_dispE = 1;
         grip.dur_dispE = 1;
@@ -842,8 +842,8 @@ switch GLM
         % stroop
         stroop.o_inc = 1;
         stroop.dur_inc = 0;
-        stroop.mod_inc.mdl_n = 96;
-        stroop.mod_inc.X_pred = 6;
+        stroop.mod_inc.mdl_n = 1;
+        stroop.mod_inc.E_pred = 6;
         stroop.mod_inc.RT_fp = 1;
         stroop.o_dispE = 1;
         stroop.dur_dispE = 1;
@@ -876,8 +876,8 @@ switch GLM
         % grip
         grip.o_inc = 1;
         grip.dur_inc = 0;
-        grip.mod_inc.mdl_n = 96;
-        grip.mod_inc.X_pred = 6;
+        grip.mod_inc.mdl_n = 1;
+        grip.mod_inc.E_pred = 6;
         grip.mod_inc.RT_fp = 1;
         grip.o_dispE = 1;
         grip.dur_dispE = 1;
@@ -886,8 +886,8 @@ switch GLM
         % stroop
         stroop.o_inc = 1;
         stroop.dur_inc = 0;
-        stroop.mod_inc.mdl_n = 96;
-        stroop.mod_inc.X_pred = 6;
+        stroop.mod_inc.mdl_n = 1;
+        stroop.mod_inc.E_pred = 6;
         stroop.mod_inc.RT_fp = 1;
         stroop.o_dispE = 1;
         stroop.dur_dispE = 1;
@@ -919,8 +919,8 @@ switch GLM
         % grip
         grip.o_inc = 1;
         grip.dur_inc = 0;
-        grip.mod_inc.mdl_n = 96;
-        grip.mod_inc.X_pred = 2;
+        grip.mod_inc.mdl_n = 1;
+        grip.mod_inc.E_pred = 2;
         grip.mod_inc.RT_fp = 2;
         grip.o_dispE = 1;
         grip.dur_dispE = 1;
@@ -929,8 +929,8 @@ switch GLM
         % stroop
         stroop.o_inc = 1;
         stroop.dur_inc = 0;
-        stroop.mod_inc.mdl_n = 96;
-        stroop.mod_inc.X_pred = 2;
+        stroop.mod_inc.mdl_n = 1;
+        stroop.mod_inc.E_pred = 2;
         stroop.mod_inc.RT_fp = 2;
         stroop.o_dispE = 1;
         stroop.dur_dispE = 1;
@@ -964,8 +964,8 @@ switch GLM
         grip.dur_inc = 0;
         grip.o_dispE = 1;
         grip.dur_dispE = 1;
-        grip.mod_dispE.mdl_n = 96;
-        grip.mod_dispE.X_pred = 6;
+        grip.mod_dispE.mdl_n = 1;
+        grip.mod_dispE.E_pred = 6;
         grip.mod_dispE.RT_fp = 1;
         grip.o_fbk = 1;
         grip.dur_fbk = 0;
@@ -974,8 +974,8 @@ switch GLM
         stroop.dur_inc = 0;
         stroop.o_dispE = 1;
         stroop.dur_dispE = 1;
-        stroop.mod_dispE.mdl_n = 96;
-        stroop.mod_dispE.X_pred = 6;
+        stroop.mod_dispE.mdl_n = 1;
+        stroop.mod_dispE.E_pred = 6;
         stroop.mod_dispE.RT_fp = 1;
         stroop.o_fbk = 1;
         stroop.dur_fbk = 0;
@@ -1003,8 +1003,8 @@ switch GLM
         % grip
         grip.o_inc = 1;
         grip.dur_inc = 0;
-        grip.mod_inc.mdl_n = 96;
-        grip.mod_inc.X_pred = 6;
+        grip.mod_inc.mdl_n = 1;
+        grip.mod_inc.E_pred = 6;
         grip.mod_inc.RT_fp = 1;
         grip.o_dispE = 1;
         grip.dur_dispE = 1;
@@ -1013,8 +1013,8 @@ switch GLM
         % stroop
         stroop.o_inc = 1;
         stroop.dur_inc = 0;
-        stroop.mod_inc.mdl_n = 96;
-        stroop.mod_inc.X_pred = 6;
+        stroop.mod_inc.mdl_n = 1;
+        stroop.mod_inc.E_pred = 6;
         stroop.mod_inc.RT_fp = 1;
         stroop.o_dispE = 1;
         stroop.dur_dispE = 1;

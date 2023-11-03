@@ -147,17 +147,17 @@ switch o_inc
                 loadStruct_mdl   = load([subj_analysis_folder, filesep, 'GS_model_sub',subid,'_grip_run',run_nm,'.mat']);
                 
                 %% predicted ressource level
-                if mod_inc.X_pred ~= 0 && ismember(mod_inc.X_pred,[5,6])
+                if mod_inc.E_pred ~= 0 && ismember(mod_inc.E_pred,[5,6])
                     Nmod.(curr_oInc_name) = Nmod.(curr_oInc_name) + 1;
-                    idx_oInc_Xpred = Nmod.(curr_oInc_name);
-                    modName.(curr_oInc_name)(idx_oInc_Xpred) = {'X_pred'};
-                    switch mod_inc.X_pred
+                    idx_oInc_Epred = Nmod.(curr_oInc_name);
+                    modName.(curr_oInc_name)(idx_oInc_Epred) = {'E_pred'};
+                    switch mod_inc.E_pred
                         case 5
-                            X = loadStruct_mdl.X.(['model_',num2str(mod_inc.mdl_n)]);
-                            modulators.(curr_oInc_name)(:,idx_oInc_Xpred) = X;
+                            E = loadStruct_mdl.E.(['model_',num2str(mod_inc.mdl_n)]);
+                            modulators.(curr_oInc_name)(:,idx_oInc_Epred) = E;
                         case 6
-                            X_pred = loadStruct_mdl.X_pred.(['model_',num2str(mod_inc.mdl_n)]);
-                            modulators.(curr_oInc_name)(:,idx_oInc_Xpred) = X_pred;
+                            E_pred = loadStruct_mdl.E_pred.(['model_',num2str(mod_inc.mdl_n)]);
+                            modulators.(curr_oInc_name)(:,idx_oInc_Epred) = E_pred;
                     end
                 end
             end
@@ -290,17 +290,17 @@ switch o_inc
                 expected_payoff = loadStruct_mdl.expected_payoff.(['model_',num2str(mod_inc.mdl_n)]);
                 
                 %% predicted ressource level
-                if mod_inc.X_pred ~= 0 && ismember(mod_inc.X_pred,[3,4])
+                if mod_inc.E_pred ~= 0 && ismember(mod_inc.E_pred,[3,4])
                     Nmod.(curr_oInc_name) = Nmod.(curr_oInc_name) + 1;
-                    idx_oInc_Xpred = Nmod.(curr_oInc_name);
-                    modName.(curr_oInc_name)(idx_oInc_Xpred) = {'X_pred'};
-                    switch mod_inc.X_pred
+                    idx_oInc_Epred = Nmod.(curr_oInc_name);
+                    modName.(curr_oInc_name)(idx_oInc_Epred) = {'E_pred'};
+                    switch mod_inc.E_pred
                         case 3
-                            X = loadStruct_mdl.X.(['model_',num2str(mod_inc.mdl_n)]);
-                            modulators.(curr_oInc_name)(:,idx_oInc_Xpred) = X;
+                            E = loadStruct_mdl.E.(['model_',num2str(mod_inc.mdl_n)]);
+                            modulators.(curr_oInc_name)(:,idx_oInc_Epred) = E;
                         case 4
-                            X_pred = loadStruct_mdl.X_pred.(['model_',num2str(mod_inc.mdl_n)]);
-                            modulators.(curr_oInc_name)(:,idx_oInc_Xpred) = X_pred;
+                            E_pred = loadStruct_mdl.E_pred.(['model_',num2str(mod_inc.mdl_n)]);
+                            modulators.(curr_oInc_name)(:,idx_oInc_Epred) = E_pred;
                     end
                 end
                 
@@ -451,18 +451,18 @@ switch o_inc
             end
             
             %% predicted ressource level
-            if mod_inc.X_pred ~= 0 && ismember(mod_inc.X_pred,[1,2])
+            if mod_inc.E_pred ~= 0 && ismember(mod_inc.E_pred,[1,2])
                 Nmod.(curr_oInc_name) = Nmod.(curr_oInc_name) + 1;
-                idx_oInc_Xpred = Nmod.(curr_oInc_name);
+                idx_oInc_Epred = Nmod.(curr_oInc_name);
                 loadStruct_mdl   = load([subj_analysis_folder, filesep, 'GS_model_sub',subid,'_grip_run',run_nm,'.mat']);
-                modName.(curr_oInc_name)(idx_oInc_Xpred) = {'X_pred'};
-                switch mod_inc.X_pred
+                modName.(curr_oInc_name)(idx_oInc_Epred) = {'E_pred'};
+                switch mod_inc.E_pred
                     case 1
-                        X = loadStruct_mdl.X.(['model_',num2str(mod_inc.mdl_n)]);
-                        modulators.(curr_oInc_name)(:,idx_oInc_Xpred) = X;
+                        E = loadStruct_mdl.E.(['model_',num2str(mod_inc.mdl_n)]);
+                        modulators.(curr_oInc_name)(:,idx_oInc_Epred) = E;
                     case 2
-                        X_pred = loadStruct_mdl.X_pred.(['model_',num2str(mod_inc.mdl_n)]);
-                        modulators.(curr_oInc_name)(:,idx_oInc_Xpred) = X_pred;
+                        E_pred = loadStruct_mdl.E_pred.(['model_',num2str(mod_inc.mdl_n)]);
+                        modulators.(curr_oInc_name)(:,idx_oInc_Epred) = E_pred;
                 end
             end
             
@@ -595,17 +595,17 @@ switch o_dispE
                 loadStruct_mdl   = load([subj_analysis_folder, filesep, 'GS_model_sub',subid,'_grip_run',run_nm,'.mat']);
 
                 %% predicted ressource level
-                if mod_dispE.X_pred ~= 0 && ismember(mod_dispE.X_pred,[5,6])
+                if mod_dispE.E_pred ~= 0 && ismember(mod_dispE.E_pred,[5,6])
                     Nmod.(curr_oEScale_name) = Nmod.(curr_oEScale_name) + 1;
-                    idx_oDispE_Xpred = Nmod.(curr_oEScale_name);
-                    modName.(curr_oEScale_name)(idx_oDispE_Xpred) = {'X_pred'};
-                    switch mod_dispE.X_pred
+                    idx_oDispE_Epred = Nmod.(curr_oEScale_name);
+                    modName.(curr_oEScale_name)(idx_oDispE_Epred) = {'E_pred'};
+                    switch mod_dispE.E_pred
                         case 5
-                            X = loadStruct_mdl.X.(['model_',num2str(mod_dispE.mdl_n)]);
-                            modulators.(curr_oEScale_name)(:,idx_oDispE_Xpred) = X;
+                            E = loadStruct_mdl.E.(['model_',num2str(mod_dispE.mdl_n)]);
+                            modulators.(curr_oEScale_name)(:,idx_oDispE_Epred) = E;
                         case 6
-                            X_pred = loadStruct_mdl.X_pred.(['model_',num2str(mod_dispE.mdl_n)]);
-                            modulators.(curr_oEScale_name)(:,idx_oDispE_Xpred) = X_pred;
+                            E_pred = loadStruct_mdl.E_pred.(['model_',num2str(mod_dispE.mdl_n)]);
+                            modulators.(curr_oEScale_name)(:,idx_oDispE_Epred) = E_pred;
                     end
                 end
             end
@@ -740,17 +740,17 @@ switch o_dispE
                 expected_payoff = loadStruct_mdl.expected_payoff.(['model_',num2str(mod_dispE.mdl_n)]);
                 
                 %% predicted ressource level
-                if mod_dispE.X_pred ~= 0 && ismember(mod_dispE.X_pred,[3,4])
+                if mod_dispE.E_pred ~= 0 && ismember(mod_dispE.E_pred,[3,4])
                     Nmod.(curr_oEScale_name) = Nmod.(curr_oEScale_name) + 1;
-                    idx_oDispE_Xpred = Nmod.(curr_oEScale_name);
-                    modName.(curr_oEScale_name)(idx_oDispE_Xpred) = {'X_pred'};
-                    switch mod_dispE.X_pred
+                    idx_oDispE_Epred = Nmod.(curr_oEScale_name);
+                    modName.(curr_oEScale_name)(idx_oDispE_Epred) = {'E_pred'};
+                    switch mod_dispE.E_pred
                         case 3
-                            X = loadStruct_mdl.X.(['model_',num2str(mod_dispE.mdl_n)]);
-                            modulators.(curr_oEScale_name)(:,idx_oDispE_Xpred) = X;
+                            E = loadStruct_mdl.E.(['model_',num2str(mod_dispE.mdl_n)]);
+                            modulators.(curr_oEScale_name)(:,idx_oDispE_Epred) = E;
                         case 4
-                            X_pred = loadStruct_mdl.X_pred.(['model_',num2str(mod_dispE.mdl_n)]);
-                            modulators.(curr_oEScale_name)(:,idx_oDispE_Xpred) = X_pred;
+                            E_pred = loadStruct_mdl.E_pred.(['model_',num2str(mod_dispE.mdl_n)]);
+                            modulators.(curr_oEScale_name)(:,idx_oDispE_Epred) = E_pred;
                     end
                 end
                 
@@ -858,18 +858,18 @@ switch o_dispE
             end
             
             %% predicted ressource level
-            if mod_dispE.X_pred ~= 0 && ismember(mod_dispE.X_pred,[1,2])
+            if mod_dispE.E_pred ~= 0 && ismember(mod_dispE.E_pred,[1,2])
                 Nmod.(curr_oEScale_name) = Nmod.(curr_oEScale_name) + 1;
-                idx_oDispE_Xpred = Nmod.(curr_oEScale_name);
+                idx_oDispE_Epred = Nmod.(curr_oEScale_name);
                 loadStruct_mdl   = load([subj_analysis_folder, filesep, 'GS_model_sub',subid,'_grip_run',run_nm,'.mat']);
-                modName.(curr_oEScale_name)(idx_oDispE_Xpred) = {'X_pred'};
-                switch mod_dispE.X_pred
+                modName.(curr_oEScale_name)(idx_oDispE_Epred) = {'E_pred'};
+                switch mod_dispE.E_pred
                     case 1
-                        X = loadStruct_mdl.X.(['model_',num2str(mod_dispE.mdl_n)]);
-                        modulators.(curr_oEScale_name)(:,idx_oDispE_Xpred) = X;
+                        E = loadStruct_mdl.E.(['model_',num2str(mod_dispE.mdl_n)]);
+                        modulators.(curr_oEScale_name)(:,idx_oDispE_Epred) = E;
                     case 2
-                        X_pred = loadStruct_mdl.X_pred.(['model_',num2str(mod_dispE.mdl_n)]);
-                        modulators.(curr_oEScale_name)(:,idx_oDispE_Xpred) = X_pred;
+                        E_pred = loadStruct_mdl.E_pred.(['model_',num2str(mod_dispE.mdl_n)]);
+                        modulators.(curr_oEScale_name)(:,idx_oDispE_Epred) = E_pred;
                 end
             end
             
@@ -977,18 +977,18 @@ switch o_fbk
             end
 
             %% predicted ressource level
-            if mod_fbk.X_pred ~= 0
+            if mod_fbk.E_pred ~= 0
                 Nmod.(curr_oFbk_name) = Nmod.(curr_oFbk_name) + 1;
-                idx_oFbk_Xpred = Nmod.(curr_oFbk_name);
+                idx_oFbk_Epred = Nmod.(curr_oFbk_name);
                 loadStruct_mdl   = load([subj_analysis_folder, filesep, 'GS_model_sub',subid,'_grip_run',run_nm,'.mat']);
-                modName.(curr_oFbk_name)(idx_oFbk_Xpred) = {'X_pred'};
-                switch mod_fbk.X_pred
+                modName.(curr_oFbk_name)(idx_oFbk_Epred) = {'E_pred'};
+                switch mod_fbk.E_pred
                     case 5
-                        X = loadStruct_mdl.X.(['model_',num2str(mod_fbk.mdl_n)]);
-                        modulators.(curr_oFbk_name)(:,idx_oFbk_Xpred) = X;
+                        E = loadStruct_mdl.E.(['model_',num2str(mod_fbk.mdl_n)]);
+                        modulators.(curr_oFbk_name)(:,idx_oFbk_Epred) = E;
                     case 6
-                        X_pred = loadStruct_mdl.X_pred.(['model_',num2str(mod_fbk.mdl_n)]);
-                        modulators.(curr_oFbk_name)(:,idx_oFbk_Xpred) = X_pred;
+                        E_pred = loadStruct_mdl.E_pred.(['model_',num2str(mod_fbk.mdl_n)]);
+                        modulators.(curr_oFbk_name)(:,idx_oFbk_Epred) = E_pred;
                 end
             end
             
@@ -1019,18 +1019,18 @@ switch o_fbk
             end
             
             %% predicted ressource level
-            if mod_fbk.X_pred ~= 0
+            if mod_fbk.E_pred ~= 0
                 Nmod.(curr_oFbk_name) = Nmod.(curr_oFbk_name) + 1;
-                idx_oFbk_Xpred = Nmod.(curr_oFbk_name);
+                idx_oFbk_Epred = Nmod.(curr_oFbk_name);
                 loadStruct_mdl   = load([subj_analysis_folder, filesep, 'GS_model_sub',subid,'_grip_run',run_nm,'.mat']);
-                modName.(curr_oFbk_name)(idx_oFbk_Xpred) = {'X_pred'};
-                switch mod_fbk.X_pred
+                modName.(curr_oFbk_name)(idx_oFbk_Epred) = {'E_pred'};
+                switch mod_fbk.E_pred
                     case 1
-                        X = loadStruct_mdl.X.(['model_',num2str(mod_fbk.mdl_n)]);
-                        modulators.(curr_oFbk_name)(:,idx_oFbk_Xpred) = X;
+                        E = loadStruct_mdl.E.(['model_',num2str(mod_fbk.mdl_n)]);
+                        modulators.(curr_oFbk_name)(:,idx_oFbk_Epred) = E;
                     case 2
-                        X_pred = loadStruct_mdl.X_pred.(['model_',num2str(mod_fbk.mdl_n)]);
-                        modulators.(curr_oFbk_name)(:,idx_oFbk_Xpred) = X_pred;
+                        E_pred = loadStruct_mdl.E_pred.(['model_',num2str(mod_fbk.mdl_n)]);
+                        modulators.(curr_oFbk_name)(:,idx_oFbk_Epred) = E_pred;
                 end
             end
             
@@ -1072,8 +1072,6 @@ switch o_fbk
                     'sub_ROI_trial_b_trial'),'sub_ROI_trial_b_trial');
                 modulators.(curr_oFbk_name)(:,idx_oFbk_ROI) = ROI_data.(ROI_nm).G.(ROI_period_nm).(jRun_nm).(sub_nm)(trialN_idx);
             end
-            
-            %% luminance
             
             %% trial number
             if mod_fbk.trialN ~= 0 && ismember(mod_fbk.trialN,[1,3])

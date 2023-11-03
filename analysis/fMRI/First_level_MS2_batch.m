@@ -1,6 +1,5 @@
-function[] = First_level_MS2_megaconcatenation_NicoC_batch(GLM, checking,...
-    bayesian_mdl)
-%[] = First_level_MS2_megaconcatenation_NicoC_batch(GLM, checking, subject_id, pc_cluster, bayesian_mdl)
+function[] = First_level_MS2_batch(GLM, checking, bayesian_mdl)
+%[] = First_level_MS2_batch(GLM, checking, bayesian_mdl)
 % Batch script for first level fMRI for multiband (1.1s) fMRI sequence of
 % MotiScan-2
 % Use of SPM-12
@@ -22,7 +21,7 @@ function[] = First_level_MS2_megaconcatenation_NicoC_batch(GLM, checking,...
 %
 % Makes a global GLM where all three tasks of MS2 (learning, grip and stroop) are pooled together
 %
-% See also: preprocessing_NicoC_batch, onsets_for_fMRI_MS2,
+% See also: preprocessing_batch, onsets_for_fMRI_MS2,
 % group_onsets_for_fMRI_MS2, which_GLM_MS2
 
 %% working directories
@@ -134,14 +133,8 @@ for iSub = 1:NS
         matlabbatch{sub_idx}.spm.stats.fmri_spec.sess(iRun).scans = preprocessed_filenames;
         
         % identify task corresponding to this run
-        switch pc_cluster
-            case 'pc'
-                behaviorFile = ls([subj_behavior_folder, filesep,...
-                    'global_sub_',subid,'_session_',runname,'_*']);
-            case 'cluster'
-                behaviorFile = cell2mat(get_folder_list(['global_sub_',subid,'_session_',runname,'_*'],...
-                    subj_behavior_folder));
-        end
+        behaviorFile = cell2mat(get_folder_list(['global_sub_',subid,'_session_',runname,'_*'],...
+            subj_behavior_folder));
         taskName = getfield(load([subj_behavior_folder, filesep, behaviorFile], 'taskName'),'taskName'); % load taskName to see what task is corresponding to this run
         
         switch taskName
@@ -163,12 +156,7 @@ for iSub = 1:NS
         matlabbatch{sub_idx}.spm.stats.fmri_spec.sess(iRun).multi = {''};
         matlabbatch{sub_idx}.spm.stats.fmri_spec.sess(iRun).regress = struct('name', {}, 'val', {});
         mvmtFolder = [subj_scans_folder, filesep, subj_runFoldername, filesep];
-        switch pc_cluster
-            case 'pc'
-                movement_file = ls([mvmtFolder, 'rp*']);
-            case 'cluster'
-                movement_file = cell2mat(get_folder_list('rp*',mvmtFolder));
-        end
+        movement_file = ls([mvmtFolder, 'rp*']);
         movement_filePath = [mvmtFolder, movement_file];
         matlabbatch{sub_idx}.spm.stats.fmri_spec.sess(iRun).multi_reg = {movement_filePath};
         matlabbatch{sub_idx}.spm.stats.fmri_spec.sess(iRun).hpf = 128;
@@ -215,12 +203,7 @@ for iSub = 1:NS
             % find grey matter mask
             switch grey_mask
                 case 1 % grey mask per subject
-                    switch pc_cluster
-                        case 'pc'
-                            mask_file = ls([subj_anat_folder filesep 'bmwc1s*']); % modulated grey matter mask
-                        case 'cluster' % path stored when using ls with the path
-                            mask_file = cell2mat(get_folder_list('bmwc1s*',subj_anat_folder));
-                    end
+                    mask_file = ls([subj_anat_folder filesep 'bmwc1s*']); % modulated grey matter mask
                     mask_file_path = [subj_anat_folder, mask_file];
                 case 2 % grey matter filter across subs
                     mask_file_path = [root, filesep, 'Second_level', filesep,...

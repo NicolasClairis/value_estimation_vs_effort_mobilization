@@ -1,5 +1,5 @@
-function [] = contrasts_megaconcatenation_MS2_NicoC(GLM, checking)
-% contrasts_megaconcatenation_NicoC_batch(GLM, checking) 
+function [] = contrasts_MS2_batch(GLM, checking)
+% contrasts_MS2_batch(GLM, checking) 
 % concatenates together all tasks in the same GLM
 % For Motiscan1 study for april-may 2016 (multisequence) or june 2016 (EPI
 % only)
@@ -11,7 +11,7 @@ function [] = contrasts_megaconcatenation_MS2_NicoC(GLM, checking)
 % checking: if 0 or empty, run the GLM with all the subjects, if equal to
 % 1, displays the interactive window on only one subject
 %
-% See also which_GLM_MS2.m, First_level_MS2_megaconcatenation_NicoC_batch
+% See also which_GLM_MS2.m, First_level_MS2_batch
 
 close all; clc;
 

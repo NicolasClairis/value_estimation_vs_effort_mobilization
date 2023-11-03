@@ -1,6 +1,6 @@
-function [  ] = MS2_RL_model_bis( RL_model_n )
-%[  ] = MS2_RL_model_bis( RL_model_n )
-%MS2_RL_model_bis will compute a modelfor the Q.learning in RL version.
+function [  ] = MS2_RL_launch_Qmodel( RL_model_n )
+%[  ] = MS2_RL_launch_Qmodel( RL_model_n )
+%MS2_RL_launch_Qmodel will compute a modelfor the Q.learning in RL version.
 %
 % INPUTS
 % RL_model_n: model number

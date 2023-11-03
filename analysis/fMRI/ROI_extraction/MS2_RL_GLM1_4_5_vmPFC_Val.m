@@ -20,7 +20,7 @@ pSize = 30;
 
 GLMs = {'GLM1','GLM4','GLM5'};
 nGLM = length(GLMs);
-ROIs = {'vmPFC','mPFC','dmPFC'};
+ROIs = {'vmPFC','mmPFC','dmPFC'};
 nROIs = length(ROIs);
 regs_RL = {'Val','Conf','DT'};
 nRegs_RL = length(regs_RL);
@@ -38,7 +38,7 @@ end
 
 % ROI indexes
 ROI_idx.vmPFC   = 1;
-ROI_idx.mPFC    = 2;
+ROI_idx.mmPFC    = 2;
 ROI_idx.dmPFC   = 3;
 % number of subjects
 NS_RL = length(RL_dataStruct.(GLM_nm).subject_id);
@@ -70,20 +70,20 @@ for iReg = 1:nRegs_RL
         jIdx = jIdx + 1;
         subplot(nGLM,3,jIdx);
         % convert 4D data to 2D vector
-        [vmPFC_data_tmp, mPFC_data_tmp, dmPFC_data_tmp] = deal(NaN(NS_RL,1));
+        [vmPFC_data_tmp, mmPFC_data_tmp, dmPFC_data_tmp] = deal(NaN(NS_RL,1));
         vmPFC_data_tmp(:,1) = RL_dataStruct.(GLM_nm).con_vec_all(con_idx_tmp,1,:,ROI_idx.vmPFC);
-        mPFC_data_tmp(:,1) = RL_dataStruct.(GLM_nm).con_vec_all(con_idx_tmp,1,:,ROI_idx.mPFC);
+        mmPFC_data_tmp(:,1) = RL_dataStruct.(GLM_nm).con_vec_all(con_idx_tmp,1,:,ROI_idx.mmPFC);
         dmPFC_data_tmp(:,1) = RL_dataStruct.(GLM_nm).con_vec_all(con_idx_tmp,1,:,ROI_idx.dmPFC);
         % display value/Conf/DT
-        violinplot([vmPFC_data_tmp, mPFC_data_tmp, dmPFC_data_tmp],...
-            {'vmPFC','mPFC','dmPFC'},...
+        violinplot([vmPFC_data_tmp, mmPFC_data_tmp, dmPFC_data_tmp],...
+            {'vmPFC','mmPFC','dmPFC'},...
             'ViolinColor',[col;col;col]);
         hold on;
         line([0.7 3.3],[0 0],'LineWidth',1,'Color','k');
         xticks(1:3);
         ylim([-2 2]);
         ylabel('Regression estimate');
-        xticklabels({'vmPFC','mPFC','dmPFC'});
+        xticklabels({'vmPFC','mmPFC','dmPFC'});
         legend_size(pSize);
     end % GLM
 end % regressor

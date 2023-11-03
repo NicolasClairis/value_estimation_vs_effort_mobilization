@@ -27,7 +27,7 @@ root = 'enter path here';
 ROI_path = [root,filesep,'behavior_summary',filesep,'ROI',filesep];
 ROI_masks_path = 'enter path here';
 %% select the ROI you want to use
-[ ROI_xyz, ROI_sphere_or_mask, ROI_nm, n_ROI ] = ROI_selection(ROI_masks_path);
+[ ROI_xyz, ~, ~, n_ROI ] = ROI_selection(ROI_masks_path);
 
 %% which GLM
 if ~exist('GLM','var') || isempty(GLM)
@@ -139,26 +139,5 @@ if ~exist([filename,'.mat'],'file')
         end
         save([filename,'.mat'])
 end
-
-% %% loop through figures as defined when script launched at the
-% % beginning
-% for iFig = 1:figNumber
-%     conFig = which_con(iFig,:);
-%     selectedCon = find(conFig == 1); % extract index of contrasts selected
-%     % display figure
-% %     [roi_fig] = roi_graph(selectedCon, n_ROI,...
-% %         con_vec_all, con_avg, con_sem, con_names, ttest_pval, ROI_nm, ROI_sphere_or_mask);
-%     % save image
-%     cd(ROI_path);
-%     img_name = ['GLM',num2str(GLM),'_',beta_or_t_value,'_',conName{iFig},'_',num2str(n_ROI),'ROIs_',num2str(NS),'_subs.png'];
-%     if exist(img_name,'file') ~= 2
-%         set(gcf,'PaperPosition',[0 0 1 1]);
-%         set(gcf,'PaperPositionMode','auto');
-%         saveas(roi_fig,img_name);
-%     else
-%         warning(['There is already a file with the name ', img_name,' so the figure has not been saved yet.',...
-%             ' Please do it manually or change the script to be able to do it automatically in the future.']);
-%     end
-% end % figure loop
 
 end % function

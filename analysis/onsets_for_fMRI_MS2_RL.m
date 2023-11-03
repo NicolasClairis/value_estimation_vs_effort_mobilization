@@ -1,5 +1,5 @@
-function [] = onsets_for_fMRI_MS2_RL(behaviorDir, fMRI_Dir, subid, subject_id)
-%[] = onsets_for_fMRI_MS2_RL(behaviorDir, fMRI_Dir, subid, subject_id)
+function [] = onsets_for_fMRI_MS2_RL(behaviorDir, fMRI_Dir, subid)
+%[] = onsets_for_fMRI_MS2_RL(behaviorDir, fMRI_Dir, subid)
 % onsets_for_fMRI_MS2_RL extracts the onsets and relevant variables for
 % performing the analysis of the reinforcement-learning task in the Motiscan2 2017 march
 % study.
@@ -10,8 +10,6 @@ function [] = onsets_for_fMRI_MS2_RL(behaviorDir, fMRI_Dir, subid, subject_id)
 % fMRI_Dir: path to subject fMRI data
 %
 % subid: subject identification number (string)
-%
-% subject_id: subject full identification name (string)
 %
 % OUTPUTS
 % (learn: structure containing all the relevant infos saved in each subject
@@ -104,21 +102,6 @@ for iLearnRun = learn_runs % iLearnRun: real number of learn run (1,4,7)
     sideBest    = loadStruct_behavior.side;
     choice_LR   = loadStruct_behavior.choice;
     choice_BestOrWorse = (choice_LR == sideBest);
-    % load Q.values
-    if exist([fMRI_Dir, 'Q_values_for_fMRI_',subject_id,'.mat'],'file')
-        loadStruct_RL_stuff = load([fMRI_Dir, 'Q_values_for_fMRI_',subject_id,'.mat'],...
-            'Alpha','Beta','PredictionError','Q_values','proba');
-        Alpha           = loadStruct_RL_stuff.Alpha;
-        Beta            = loadStruct_RL_stuff.Beta;
-        PredictionError = loadStruct_RL_stuff.PredictionError;
-        Q_values        = loadStruct_RL_stuff.Q_values;
-        proba           = loadStruct_RL_stuff.proba;
-    else
-        warning(['Please launch group_Q_RL_parameters_MS2.m, ',...
-            'or Q_RL_Parameters_simpleModel_MS2.m or ',...
-            'Q_RL_Parameters_MS2.m before using onsets_for_fMRI_MS2.m']);
-        return;
-    end
     
     %% exclude trials with no answer (and eventually also add those where
     % the answer was given too soon by mistake)
@@ -519,68 +502,6 @@ for iLearnRun = learn_runs % iLearnRun: real number of learn run (1,4,7)
     learn.mod.trialN.zAcrossRuns.lossPair_last.main         = trialN_zARun(lossPair_lastTrials);
     learn.mod.trialN.zAcrossRuns.GLPairs_first.main         = trialN_zARun(GLPairs_firstTrials);
     learn.mod.trialN.zAcrossRuns.GLPairs_last.main          = trialN_zARun(GLPairs_lastTrials);
-    %% Q.values
-    % extract Q.values parameter
-    % for full run
-    learn.mod.Q.gainPair.allPairsTrials.GainItem         = Q_values.Q_G_A(RL_nonExcludedTrials_idx,jLearnRun);
-    learn.mod.Q.gainPair.allPairsTrials.NeutralItem      = Q_values.Q_G_B(RL_nonExcludedTrials_idx,jLearnRun);
-    learn.mod.Q.lossPair.allPairsTrials.NeutralItem      = Q_values.Q_L_A(RL_nonExcludedTrials_idx,jLearnRun);
-    learn.mod.Q.lossPair.allPairsTrials.LossItem         = Q_values.Q_L_B(RL_nonExcludedTrials_idx,jLearnRun);
-    % extract Q.value for full run for chosen option
-    learn.mod.Q.gainPair.allPairsTrials.Qch_GP           = Q_values.Q_ch_GP(RL_nonExcludedTrials_idx,jLearnRun);
-    learn.mod.Q.lossPair.allPairsTrials.Qch_LP           = Q_values.Q_ch_LP(RL_nonExcludedTrials_idx,jLearnRun);
-    % gain + loss pool
-    learn.mod.Q.gainPair.GL_Pairs.GainItem         = Q_values.Q_G_A(GL_PairsTrials,jLearnRun);
-    learn.mod.Q.gainPair.GL_Pairs.NeutralItem      = Q_values.Q_G_B(GL_PairsTrials,jLearnRun);
-    learn.mod.Q.lossPair.GL_Pairs.NeutralItem      = Q_values.Q_L_A(GL_PairsTrials,jLearnRun);
-    learn.mod.Q.lossPair.GL_Pairs.LossItem         = Q_values.Q_L_B(GL_PairsTrials,jLearnRun);
-    % for concerned gain/loss trials only
-    learn.mod.Q.gainPair.gainPairTrials.GainItem    = Q_values.Q_G_A(gainPairsTrials,jLearnRun);
-    learn.mod.Q.gainPair.gainPairTrials.NeutralItem = Q_values.Q_G_B(gainPairsTrials,jLearnRun);
-    learn.mod.Q.lossPair.lossPairTrials.NeutralItem = Q_values.Q_L_A(lossPairsTrials,jLearnRun);
-    learn.mod.Q.lossPair.lossPairTrials.LossItem    = Q_values.Q_L_B(lossPairsTrials,jLearnRun);
-    % split first/last trials
-    learn.mod.Q.gainPair_first.gainPairTrials.GainItem      = Q_values.Q_G_A(gainPair_firstTrials,jLearnRun);
-    learn.mod.Q.gainPair_last.gainPairTrials.GainItem       = Q_values.Q_G_A(gainPair_lastTrials,jLearnRun);
-    learn.mod.Q.gainPair_first.gainPairTrials.NeutralItem   = Q_values.Q_G_B(gainPair_firstTrials,jLearnRun);
-    learn.mod.Q.gainPair_last.gainPairTrials.NeutralItem    = Q_values.Q_G_B(gainPair_lastTrials,jLearnRun);
-    learn.mod.Q.lossPair_first.lossPairTrials.NeutralItem   = Q_values.Q_L_A(lossPair_firstTrials,jLearnRun);
-    learn.mod.Q.lossPair_last.lossPairTrials.NeutralItem    = Q_values.Q_L_A(lossPair_lastTrials,jLearnRun);
-    learn.mod.Q.lossPair_first.lossPairTrials.LossItem      = Q_values.Q_L_B(lossPair_firstTrials,jLearnRun);
-    learn.mod.Q.lossPair_last.lossPairTrials.LossItem       = Q_values.Q_L_B(lossPair_lastTrials,jLearnRun);
-    
-    % extract Q.value for gain/loss trials only for chosen option
-    learn.mod.Q.gainPair.gainPairTrials.Qch_GP      = Q_values.Q_ch_GP(gainPairsTrials,jLearnRun);
-    learn.mod.Q.lossPair.lossPairTrials.Qch_LP      = Q_values.Q_ch_LP(lossPairsTrials,jLearnRun);
-    % split first/last trials
-    learn.mod.Q.gainPair_first.gainPairTrials.Qch_GP        = Q_values.Q_ch_GP(gainPair_firstTrials,jLearnRun);
-    learn.mod.Q.gainPair_last.gainPairTrials.Qch_GP         = Q_values.Q_ch_GP(gainPair_lastTrials,jLearnRun);
-    learn.mod.Q.lossPair_first.lossPairTrials.Qch_LP        = Q_values.Q_ch_LP(lossPair_firstTrials,jLearnRun);
-    learn.mod.Q.lossPair_last.lossPairTrials.Qch_LP         = Q_values.Q_ch_LP(lossPair_lastTrials,jLearnRun);
-    
-    % extract Q.value for gain/loss trials types for expected value (Qa*Pa+Qb*Pb)
-    learn.mod.Q.gainPair.gainPairTrials.Qexp_GP = Q_values.Q_G_A_gainPairTrials(G_RL_nonExcludedTrials,jLearnRun).*proba.p_GP_best(G_RL_nonExcludedTrials,jLearnRun) +...
-        Q_values.Q_G_B_gainPairTrials(G_RL_nonExcludedTrials,jLearnRun).*proba.p_GP_ntal(G_RL_nonExcludedTrials,jLearnRun);
-    learn.mod.Q.lossPair.lossPairTrials.Qexp_LP = Q_values.Q_L_A_lossPairTrials(L_RL_nonExcludedTrials,jLearnRun).*proba.p_LP_ntal(L_RL_nonExcludedTrials,jLearnRun) +...
-        Q_values.Q_L_B_lossPairTrials(L_RL_nonExcludedTrials,jLearnRun).*proba.p_LP_worse(L_RL_nonExcludedTrials,jLearnRun);
-    
-    %% PE
-    % extract PE
-    learn.mod.PE.allPairs = PredictionError.PE(RL_nonExcludedTrials_idx,jLearnRun);
-    learn.mod.PE.GL_Pairs = PredictionError.PE(GL_PairsTrials,jLearnRun);
-    learn.mod.PE.gainPair = PredictionError.PE(gainPairsTrials,jLearnRun);
-    learn.mod.PE.lossPair = PredictionError.PE(lossPairsTrials,jLearnRun);
-    % split first/second half of trials
-    learn.mod.PE.gainPair_first = PredictionError.PE(gainPair_firstTrials,jLearnRun);
-    learn.mod.PE.gainPair_last = PredictionError.PE(gainPair_lastTrials,jLearnRun);
-    learn.mod.PE.lossPair_first = PredictionError.PE(lossPair_firstTrials,jLearnRun);
-    learn.mod.PE.lossPair_last = PredictionError.PE(lossPair_lastTrials,jLearnRun);
-    learn.mod.PE.GLPairs_first = PredictionError.PE(GLPairs_firstTrials,jLearnRun);
-    learn.mod.PE.GLPairs_last = PredictionError.PE(GLPairs_lastTrials,jLearnRun);
-    
-    % alpha/beta parameters
-    learn.mod.alpha = Alpha(jLearnRun);
-    learn.mod.beta = Beta(jLearnRun);
     
     %% Q.values and related variables from VBA models
     % need to extract feedback for Prediction Error computation

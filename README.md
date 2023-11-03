@@ -9,7 +9,7 @@ The script will then ask you to provide a subject number, the session number (wh
 
 To perform the analysis, you may use the following scripts depending on the analysis you want to perform:
 
-*behavior
+**behavior**
 - RL task:
   - MS2_RL_launch_Qmodel to perform the computational model on choices
   - MS2_RL_check_balanced_accuracy and MS2_RL_choice_model_quality to look at model quality
@@ -27,7 +27,7 @@ To perform the analysis, you may use the following scripts depending on the anal
   - MS2_GS_perf_fig to check performance = f(trial) and f(incentives)
 
 
-*fMRI analysis
+**fMRI analysis**
 - preprocessing_NicoC_batch.m to preprocess the fMRI images obtained (some adapting of the file names and paths will be required for your own version).
 - group_onsets_for_fMRI_MS2.m to prepare the regressors for the fMRI
 - First_level_MS2_batch.m to obtain first level data
@@ -37,7 +37,7 @@ To perform the analysis, you may use the following scripts depending on the anal
 - MS2_extract_ROI_con: script to extract ROI
 - MS2_GLM1_E_RT, MS2_GS_GLM1_2_3_4, MS2_GS_GLM1_2_3_4, MS2_RL_GLM1, MS2_RL_GLM1_4_5_vmPFC_Val, MS2_RL_GLM2_3_Val_Conf_DT_orthog: script to produce the ROI figures of our manuscript once the ROI have been extracted
 
-*Pupil analysis
+**Pupil analysis**
 - preproc_eyeGazePupil_MotiScan.m for preprocessing your pupil data
 - for RL task: launch MS2_pupil_RL_Val_Conf_DT.m to get correlation between Val, Conf, DT and pupil
 - for grip/Stroop tasks: launch MS2_pupil_GS_X_I_RT.m to get correlation between E*, RT and pupil

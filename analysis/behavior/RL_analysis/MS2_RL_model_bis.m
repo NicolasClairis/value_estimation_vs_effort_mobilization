@@ -141,6 +141,8 @@ for iS = 1:NS
         
         %% pool data across runs
         [runs_idx] = MS2_task_runs_extraction('RL', sub_nm);
+        % you need a function that gives you the corresponding session
+        % numbers for the RL task and the current subject here
         
         % loop through runs
         for iRun = 1:n_RL_runs

@@ -878,7 +878,7 @@ if figDisp == 1
 %             'k--',...
 %             'LineWidth',lSize);
         %     xlabel('Q_g_a_u_c_h_e - Q_d_r_o_i_t_e');
-        xlabel('ΔV');
+        xlabel('Q_l_e_f_t - Q_r_i_g_h_t');
         ylabel('Val');
         legend_size(pSize);
         switch pair_nm

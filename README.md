@@ -8,6 +8,7 @@ To launch the task, you just have to launch one of the following three tasks wit
 The script will then ask you to provide a subject number, the session number (which has to be between 0 and 8 by default, script has to be modified if you want to change that) and whether you plan to use the SR ResearchLight Eyetracker or not.
 
 To perform the analysis, you may use the following scripts depending on the analysis you want to perform:
+
 *behavior
 - RL task:
   - MS2_RL_launch_Qmodel to perform the computational model on choices
@@ -35,6 +36,7 @@ To perform the analysis, you may use the following scripts depending on the anal
 - ConjunctionPrep_Second_level.m to perform conjunction between contrasts of interest
 - MS2_extract_ROI_con: script to extract ROI
 - MS2_GLM1_E_RT, MS2_GS_GLM1_2_3_4, MS2_GS_GLM1_2_3_4, MS2_RL_GLM1, MS2_RL_GLM1_4_5_vmPFC_Val, MS2_RL_GLM2_3_Val_Conf_DT_orthog: script to produce the ROI figures of our manuscript once the ROI have been extracted
+
 *Pupil analysis
 - preproc_eyeGazePupil_MotiScan.m for preprocessing your pupil data
 - for RL task: launch MS2_pupil_RL_Val_Conf_DT.m to get correlation between Val, Conf, DT and pupil

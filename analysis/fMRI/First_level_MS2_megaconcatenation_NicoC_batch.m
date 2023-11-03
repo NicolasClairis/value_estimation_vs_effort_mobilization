@@ -1,4 +1,4 @@
-function[] = First_level_MS2_megaconcatenation_NicoC_batch(GLM, checking, subject_id,...
+function[] = First_level_MS2_megaconcatenation_NicoC_batch(GLM, checking,...
     bayesian_mdl)
 %[] = First_level_MS2_megaconcatenation_NicoC_batch(GLM, checking, subject_id, pc_cluster, bayesian_mdl)
 % Batch script for first level fMRI for multiband (1.1s) fMRI sequence of
@@ -15,8 +15,6 @@ function[] = First_level_MS2_megaconcatenation_NicoC_batch(GLM, checking, subjec
 % (0) directly runs the first level GLM
 % (1) only displays interactive window on one subject to see if everything
 % is fine
-%
-% subject_id: input string subject identification name (but can be left empty)
 %
 % bayesian_mdl
 % (0) use classical First level model (by default if not entered in the inputs)

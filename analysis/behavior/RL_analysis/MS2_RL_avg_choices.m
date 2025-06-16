@@ -33,10 +33,10 @@ for iS = 1:NS
     for iRL_run = 1:n_RL_runs
         run_nb = RL_runs_idx(iRL_run);
         data_tmp = load([sub_folder, 'global_sub_',subid,'_session_',num2str(run_nb),'_learning.mat'],'response','npair');
-        response_tmp = data_tmp.response;
-        npair_tmp = data_tmp.npair;
+        response_tmp = data_tmp.response; % subject response: (-1) for incorrect, (+1) for correct answer and (0) when no answer was provided
+        npair_tmp = data_tmp.npair; % (1) for gain pair, (2) for neutral pair and (3) for loss pair
         mChoices.perSub.perRun.gains(iRL_run,iS) = sum(response_tmp(npair_tmp == 1)==1)./sum(ismember(response_tmp(npair_tmp == 1),[-1,1]));
-        mChoices.perSub.perRun.losses(iRL_run,iS) = sum(response_tmp(npair_tmp == 3)==1)./sum(ismember(response_tmp(npair_tmp == 1),[-1,1]));
+        mChoices.perSub.perRun.losses(iRL_run,iS) = sum(response_tmp(npair_tmp == 3)==1)./sum(ismember(response_tmp(npair_tmp == 3),[-1,1]));
     end
     %% average across runs
     mChoices.perSub.aRuns.gains(iS) = mean(mChoices.perSub.perRun.gains(:,iS),1,'omitnan');

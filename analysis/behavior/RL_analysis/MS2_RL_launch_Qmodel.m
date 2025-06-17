@@ -299,10 +299,11 @@ for iS = 1:NS
         end
         
         %% extract observation parameters
-        % beta temperature
+        % beta temperature with positivity constraint (see
+        % https://mbb-team.github.io/VBA-toolbox/wiki/param-transform/#positivity-constraint)
         iPhi = 1;
-        beta.mean.perSub.aRuns(iS) = exp(posterior.muPhi(iPhi));
-        beta.sigma.perSub.aRuns(iS) = exp(posterior.SigmaPhi(iPhi, iPhi));
+        beta.mean.perSub.aRuns(iS) = exp(posterior.muPhi(iPhi) + posterior.SigmaPhi(iPhi,iPhi)/2);
+        beta.sigma.perSub.aRuns(iS) = exp(2*posterior.muPhi(iPhi)+posterior.SigmaPhi(iPhi,iPhi))*(exp(posterior.SigmaPhi(iPhi,iPhi)) - 1);
 
         % side and motor bias
         switch side_bias_prm

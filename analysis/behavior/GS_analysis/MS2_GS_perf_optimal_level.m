@@ -141,14 +141,14 @@ for iGS = 1:nTasks
                     inc_bis(trialN_tmp)     = loadStruct.mod.all.incentiveRank;
                     absInc_bis(trialN_tmp)  = loadStruct.mod.all.absIncentiveRank;
             end
-            oneCent(trialN_tmp) = (loadStruct.mod.all.absIncentive == 0.01);
-            cents(trialN_tmp) = (loadStruct.mod.all.absIncentive < 1);
-            bills(trialN_tmp) = (loadStruct.mod.all.absIncentive >= 5);
+            oneCent(trialN_tmp)             = (loadStruct.mod.all.absIncentive == 0.01);
+            cents(trialN_tmp)               = (loadStruct.mod.all.absIncentive < 1);
+            bills(trialN_tmp)               = (loadStruct.mod.all.absIncentive >= 5);
             R_type(trialN_tmp)              = loadStruct.mod.all.inc_type;
             trialVal(trialN_tmp)            = loadStruct.mod.all.trialValence;
             trialVal(trialVal == -1)        = 0; % transform into binary variable 0/1
             totalGain_prev(trialN_tmp)      = loadStruct.mod.all.totalGain_prev;
-            sumPerf_prev(trialN_tmp) = loadStruct.mod.all.sumPerf_prev;
+            sumPerf_prev(trialN_tmp)        = loadStruct.mod.all.sumPerf_prev;
             perf(trialN_tmp)                = loadStruct.mod.all.perf/100; % normalize between 0 and 1 (be careful otherwise you will have problems in the estimation for STROOP)
             time_rest(trialN_tmp)           = loadStruct.duration.all.ITI + loadStruct.duration.all.incentive; % between [1.5; 4.95]seconds
             

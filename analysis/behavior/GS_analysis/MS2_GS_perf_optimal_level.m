@@ -385,46 +385,46 @@ for iGS = 1:nTasks
         
         %% retransform fitted paremeters
         iPrm = 1;
-        kCost.(task_nm)(iS)       = fn_for_prior(posterior.muPhi(iPrm), prm_priors);
+        kCost.(task_nm)(iS)       = fn_for_posterior(posterior.muPhi(iPrm), posterior.sigmaPhi(iPrm,iPrm), prm_priors);
         switch prm_incentive_var
             case {'inc','absInc'}
                 iPrm = iPrm + 1;
-                kI.(task_nm)(iS)          = fn_for_prior(posterior.muPhi(iPrm), prm_priors);
+                kI.(task_nm)(iS)          = fn_for_posterior(posterior.muPhi(iPrm), posterior.sigmaPhi(iPrm,iPrm), prm_priors);
             case {'absInc_plus_nomInc','absInc_plus_cond',...
                     'inc_perCond'}
                 iPrm = iPrm + 1;
-                kI1.(task_nm)(iS)          = fn_for_prior(posterior.muPhi(iPrm), prm_priors);
+                kI1.(task_nm)(iS)          = fn_for_posterior(posterior.muPhi(iPrm), posterior.sigmaPhi(iPrm,iPrm), prm_priors);
                 iPrm = iPrm + 1;
-                kI2.(task_nm)(iS)          = fn_for_prior(posterior.muPhi(iPrm), prm_priors);
+                kI2.(task_nm)(iS)          = fn_for_posterior(posterior.muPhi(iPrm), posterior.sigmaPhi(iPrm,iPrm), prm_priors);
         end
         % demotivation effect on the benefit term included
         if prm_B_time_on_benef > 0
             iPrm = iPrm + 1;
-            kTreward.(task_nm)(iS)    = fn_for_prior(posterior.muPhi(iPrm), prm_priors);
+            kTreward.(task_nm)(iS)    = fn_for_posterior(posterior.muPhi(iPrm), posterior.sigmaPhi(iPrm,iPrm), prm_priors);
         end
 
         % fatigue effect on the cost term included
         if prm_C_fatigue > 0
             iPrm = iPrm + 1;
             if prm_C_fatigue ~= 3
-                kTcost.(task_nm)(iS)      = fn_for_prior(posterior.muPhi(iPrm), prm_priors);
+                kTcost.(task_nm)(iS)      = fn_for_posterior(posterior.muPhi(iPrm), posterior.sigmaPhi(iPrm,iPrm), prm_priors);
             elseif prm_C_fatigue == 3
-                kTcost.(task_nm)(iS)      = fn_for_prior(posterior.muPhi(iPrm), 'pos');
+                kTcost.(task_nm)(iS)      = fn_for_posterior(posterior.muPhi(iPrm), posterior.sigmaPhi(iPrm,iPrm), 'pos');
             end
         end
         % resting effect on the cost term included
         if prm_C_rest > 0
             iPrm = iPrm + 1;
-            kRest.(task_nm)(iS)       = fn_for_prior(posterior.muPhi(iPrm), prm_priors);
+            kRest.(task_nm)(iS)       = fn_for_posterior(posterior.muPhi(iPrm), posterior.sigmaPhi(iPrm,iPrm), prm_priors);
         end
         % kmax
         if strcmp(prm_kmax_fixed_or_free,'free') % only variable where the constraint is always positive
             % run 1
             iPrm = iPrm + 1;
-            kmax_estim.(task_nm)(1,iS)       = 1 + exp(posterior.muPhi(iPrm));
+            kmax_estim.(task_nm)(1,iS)       = 1 + fn_for_posterior(posterior.muPhi(iPrm),posterior.sigmaPhi(iPrm,iPrm),'pos');
             % run 2
             iPrm = iPrm + 1;
-            kmax_estim.(task_nm)(2,iS)       = 1 + exp(posterior.muPhi(iPrm));
+            kmax_estim.(task_nm)(2,iS)       = 1 + fn_for_posterior(posterior.muPhi(iPrm),posterior.sigmaPhi(iPrm,iPrm),'pos');
         end
         % Fmax
         if ismember(prm_Fmax_fixed_or_free,{'fixed','free','free_bis'})
@@ -443,10 +443,12 @@ for iGS = 1:nTasks
                     % run 1
                     iPrm = iPrm + 1;
                     kFmax_estim.(task_nm)(1,iS)       = 1 + sigmo(posterior.muPhi(iPrm));
+                    error('need to adjust posterior for sigma...')
                     Fmax_estim.(task_nm)(1,iS)       = kFmax_estim.(task_nm)(1,iS).*run_Fmax(1);
                     % run 2
                     iPrm = iPrm + 1;
                     kFmax_estim.(task_nm)(2,iS)       = 1 + sigmo(posterior.muPhi(iPrm));
+                    error('need to adjust posterior for sigma...')
                     Fmax_estim.(task_nm)(2,iS)       = kFmax_estim.(task_nm)(2,iS).*run_Fmax(2);
             end
         end
@@ -454,7 +456,7 @@ for iGS = 1:nTasks
                 {'perf_f_X','perf_f_X_bis','perf_f_X_ter',...
                 'perf_f_X_4','perf_f_X_5','perf_f_X_6','perf_f_X_7'})
             iPrm = iPrm + 1;
-            kX.(task_nm)(iS) = exp(posterior.muPhi(iPrm));
+            kX.(task_nm)(iS) = fn_for_posterior(posterior.muPhi(iPrm),posterior.sigmaPhi(iPrm,iPrm),'pos');
         end
         
         % predicted level of performance
